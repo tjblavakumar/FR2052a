@@ -1,0 +1,100 @@
+{
+  "_comment": "Editable factors for the FR 2052a liquidity metrics engine. All factors are DOCUMENTED APPROXIMATIONS of Regulation WW (LCR/NSFR) treatment applied to FR 2052a fields; they are not exact regulatory calculations. Edit values here to tune the engine without code changes. See ANALYTICS_NOTES.md.",
+
+  "hqla": {
+    "_comment": "HQLA-eligibility and haircut by collateral-class prefix. FR 2052a asset-category codes ending in -Q denote HQLA-eligible collateral. Haircut is applied to MarketValue to approximate the stressed HQLA contribution (Level 1 ~0%, Level 2A 15%, Level 2B 50%).",
+    "level_by_prefix": {
+      "A": "L1", "G": "L1", "CB": "L1",
+      "S": "L2A", "IG": "L2A",
+      "E": "L2B"
+    },
+    "haircut_by_level": { "L1": 0.0, "L2A": 0.15, "L2B": 0.50 },
+    "level2_cap": 0.40,
+    "level2b_cap": 0.15,
+    "hqla_suffix": "-Q"
+  },
+
+  "outflow_runoff": {
+    "_comment": "Stressed 30-day runoff rates approximating LCR outflow factors, applied to MaturityAmount. Deposits keyed by counterparty/insured; wholesale and secured by product group. Values are illustrative approximations.",
+    "deposits": {
+      "insured_stable": 0.03,
+      "uninsured_retail": 0.10,
+      "small_business": 0.10,
+      "operational": 0.25,
+      "non_operational_financial": 1.00,
+      "non_operational_nonfinancial": 0.40,
+      "brokered": 1.00,
+      "default": 0.40
+    },
+    "wholesale": {
+      "secured_funding_default": 0.25,
+      "unsecured_default": 1.00,
+      "commercial_paper": 1.00,
+      "long_term_debt": 1.00
+    },
+    "secured_by_collateral_level": {
+      "_comment": "Secured funding (repo etc.) runoff by collateral quality of the pledged asset.",
+      "L1": 0.0, "L2A": 0.15, "L2B": 0.50, "non_hqla": 1.00
+    },
+    "other_contingent": {
+      "credit_facility": 0.10,
+      "liquidity_facility": 0.30,
+      "derivative_related": 1.00,
+      "default": 0.10
+    }
+  },
+
+  "inflow_rate": {
+    "_comment": "Stressed 30-day inflow recognition rates approximating LCR inflow factors, applied to MaturityAmount of maturing inflows. Capped at 75% of outflows per LCR.",
+    "secured_lending_default": 0.0,
+    "unsecured_default": 0.50,
+    "operational_balances": 0.0,
+    "default": 0.50,
+    "inflow_cap_pct_of_outflows": 0.75
+  },
+
+  "nsfr": {
+    "_comment": "Approximate Available Stable Funding (ASF) and Required Stable Funding (RSF) factors for a simplified NSFR estimate. Highly simplified.",
+    "asf": {
+      "capital": 1.00,
+      "stable_deposits": 0.95,
+      "less_stable_deposits": 0.90,
+      "wholesale_long_term": 1.00,
+      "wholesale_short_term": 0.50,
+      "default": 0.50
+    },
+    "rsf": {
+      "hqla_l1": 0.05,
+      "hqla_l2a": 0.15,
+      "hqla_l2b": 0.50,
+      "other_assets": 0.85,
+      "default": 0.50
+    }
+  },
+
+  "buckets": {
+    "_comment": "Maturity buckets considered 'short-term' (<= 30 days) for rollover / STWF measures. Matched against the MaturityBucket enumeration.",
+    "short_term_day_max": 30,
+    "short_term_extra": ["Open"]
+  },
+
+  "analytics": {
+    "_comment": "Thresholds for trend and statistical anomaly detection. All explainable/statistical; no ML.",
+    "trend_metrics": [
+      "approx_lcr", "hqla_stock", "stress_outflows", "net_outflows",
+      "stwf_reliance", "insured_deposit_share", "secured_rollover_share",
+      "intercompany_trapped_share", "downgrade_drain_to_hqla"
+    ],
+    "anomaly": {
+      "zscore_threshold": 2.0,
+      "iqr_multiplier": 1.5,
+      "day_over_day_pct_jump": 0.40,
+      "min_points": 3
+    },
+    "forecast": {
+      "method": "linear",
+      "moving_average_window": 3,
+      "min_points": 3
+    }
+  }
+}

@@ -187,6 +187,68 @@ python tools/extract_spec.py FR_2052a20220429_f.pdf --out spec_extracted
 
 `extract_spec.py` is a standalone helper; the application never imports it.
 
+## Phase 2 — Liquidity Surveillance Analytics (`fr2052a_analytics`)
+
+Phase 1 *produces* mock FR 2052a submissions. Phase 2 *consumes* them: a
+supervisory-style analytics engine that computes liquidity metrics, evaluates a
+declarative rule engine, and runs trend, anomaly, peer-comparison, and an
+experimental forecast — surfaced via a CLI report and a Streamlit dashboard.
+
+> All analysis runs on synthetic data. Metrics are **documented approximations**
+> of Regulation WW (LCR/NSFR) applied to FR 2052a fields, not exact regulatory
+> calculations. Forecasts are experimental. See `ANALYTICS_NOTES.md` for every
+> formula and caveat.
+
+### Analyze generated data
+
+```bash
+python -m fr2052a_analytics.cli --input ./output --out ./analysis --format json --forecast-days 3
+```
+
+This loads every `FR2052a_*` file in `./output`, computes per-entity/day metrics
+(approx LCR, HQLA, stressed outflows, short-term wholesale funding reliance,
+insured-deposit share, secured rollover, intercompany trapped liquidity,
+downgrade drain), evaluates the rules, and writes a surveillance report. If
+installed as a package (`pip install -e .`), the command is also available as
+`analyze ...`.
+
+| Flag | Default | Description |
+|------|---------|-------------|
+| `--input` | `./output` | Directory of phase-1 output files (CSV or JSON) |
+| `--out` | `./analysis` | Report output directory |
+| `--format` | `json` | `json` (single file), `csv` (one file per section), or `text` (summary) |
+| `--config` | `analytics_config` | Directory of `factors.json` / `rules.json` |
+| `--banks` | all | Optional comma-separated subset to analyze |
+| `--peers` | all | Optional peer set for comparison |
+| `--forecast-days` | `0` | Experimental: days to project key metrics forward (0 = off) |
+
+Exit codes: `0` success, `2` input error (missing/empty data), `3` config error.
+
+### Tune metrics and rules without code changes
+
+The engine is config-driven, mirroring the schema-driven generator:
+
+- `analytics_config/factors.json` — HQLA levels/haircuts, runoff rates, anomaly
+  thresholds, forecast method.
+- `analytics_config/rules.json` — surveillance rules (metric, operator,
+  threshold, severity, message). Add, retune, or disable rules here; changes
+  take effect on the next run with no code edits.
+
+### Dashboard (Streamlit UI)
+
+Install the optional UI extra and launch:
+
+```bash
+python -m pip install ".[ui]"     # or: pip install streamlit altair
+streamlit run fr2052a_analytics/app.py
+```
+
+Set the input directory in the sidebar, click **Run analysis**, then explore:
+severity overview, per-entity metric time series with an optional experimental
+forecast overlay, rule findings, statistical anomalies, peer comparison, and a
+business-line breakdown. The core engine stays `pandas`/`numpy`-only; Streamlit
+is required only for the dashboard.
+
 ## Tests
 
 ```bash

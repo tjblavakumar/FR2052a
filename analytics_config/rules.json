@@ -1,0 +1,78 @@
+{
+  "_comment": "Declarative liquidity surveillance rules evaluated per (entity, date) against the metrics frame from fr2052a_analytics.metrics.compute_metrics. Edit thresholds/severity/messages here with no code changes. Each rule: id, metric (column), op (lt|le|gt|ge|eq|ne|between|outside), threshold (number, or [low,high] for between/outside), severity (info|low|medium|high|critical), message (template with {metric},{value},{threshold},{entity},{date}), enabled (optional, default true).",
+
+  "rules": [
+    {
+      "id": "LCR_BELOW_REG_MIN",
+      "metric": "approx_lcr",
+      "op": "lt",
+      "threshold": 100.0,
+      "severity": "high",
+      "message": "Approx. LCR {value:.1f}% is below the 100% regulatory minimum (approximation on synthetic data).",
+      "enabled": true
+    },
+    {
+      "id": "LCR_SEVERE",
+      "metric": "approx_lcr",
+      "op": "lt",
+      "threshold": 10.0,
+      "severity": "critical",
+      "message": "Approx. LCR {value:.1f}% indicates severe HQLA shortfall relative to stressed net outflows.",
+      "enabled": true
+    },
+    {
+      "id": "STWF_RELIANCE_HIGH",
+      "metric": "stwf_reliance",
+      "op": "gt",
+      "threshold": 0.5,
+      "severity": "medium",
+      "message": "Short-term wholesale funding is {value:.0%} of total wholesale funding, indicating rollover risk.",
+      "enabled": true
+    },
+    {
+      "id": "LOW_INSURED_DEPOSIT_SHARE",
+      "metric": "insured_deposit_share",
+      "op": "lt",
+      "threshold": 0.2,
+      "severity": "medium",
+      "message": "Insured deposits are only {value:.0%} of total deposits; funding base is flight-prone.",
+      "enabled": true
+    },
+    {
+      "id": "SECURED_ROLLOVER_HIGH",
+      "metric": "secured_rollover_share",
+      "op": "gt",
+      "threshold": 0.6,
+      "severity": "medium",
+      "message": "{value:.0%} of secured funding matures within 30 days; concentrated rollover need.",
+      "enabled": true
+    },
+    {
+      "id": "INTERCOMPANY_TRAPPED_HIGH",
+      "metric": "intercompany_trapped_share",
+      "op": "gt",
+      "threshold": 0.5,
+      "severity": "medium",
+      "message": "{value:.0%} of subsidiary liquidity/funding cannot be transferred across legal entities.",
+      "enabled": true
+    },
+    {
+      "id": "DOWNGRADE_DRAIN_HIGH",
+      "metric": "downgrade_drain_to_hqla",
+      "op": "gt",
+      "threshold": 1.0,
+      "severity": "high",
+      "message": "Collateral required on downgrade ({value:.2f}x HQLA) exceeds available HQLA.",
+      "enabled": true
+    },
+    {
+      "id": "LCR_REPORTED_DIVERGENCE",
+      "metric": "lcr_divergence",
+      "op": "outside",
+      "threshold": [-25.0, 25.0],
+      "severity": "low",
+      "message": "Computed LCR diverges from firm-reported by {value:.1f} pts (cross-check; not meaningful on synthetic S.L.6).",
+      "enabled": true
+    }
+  ]
+}

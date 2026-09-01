@@ -1,0 +1,239 @@
+Supporting Statement for the
+Complex Institution Liquidity Monitoring Report
+(FR 2052a; OMB No. 7100-0361)
+Summary
+The Board of Governors of the Federal Reserve System (Board), under authority 
+delegated by the Office of Management and Budget (OMB), has extended for three years,
+without revision, the Complex Institution Liquidity Monitoring Report (FR 2052a; OMB No. 
+7100-0361). The FR 2052a collects quantitative information on select assets, liabilities, funding 
+activities, and contingent liabilities of top-tier U.S. bank holding companies with $100 billion or 
+more in total consolidated assets, top-tier U.S. covered savings and loan holding companies with 
+$100 billion or more in total consolidated assets, and foreign banking organizations with $100 
+billion or more in combined U.S. assets. The Board uses this information to monitor the liquidity 
+profile of these banking organizations.
+The estimated total annual burden for the FR 2052a is 1,027,896 hours. The form and
+instructions are available on the Board’s public website at 
+https://www.federalreserve.gov/apps/reportingforms.
+Background and Justification
+The FR 2052a provides timely data to identify and monitor liquidity risks at large U.S. 
+banking organizations and foreign banking organizations with a significant U.S. presence, as 
+well as liquidity risks in aggregate across the financial system, especially with respect to intracompany flows and exposures within a consolidated banking organization. The FR 2052a gathers 
+data disaggregated by material legal entity (e.g., parent company, broker/dealer entities, and 
+bank entities) in a manner that provides meaningful insight into a banking organization’s 
+liquidity profile.
+The data collected by the FR 2052a provide detailed information about the liquidity risks 
+within different business lines (e.g., financing of securities positions or prime brokerage 
+activities) of certain large banking organizations supervised by the Board. The Board’s 
+supervisory surveillance program relies on this data, which provide timely information about 
+banking organization-specific liquidity risks during periods of stress. The Board uses analyses of 
+liquidity risk to inform its supervisory processes, including the preparation of analytical reports 
+that detail funding vulnerabilities. FR 2052a data also contribute to the Board’s supervisory 
+monitoring efforts by identifying potential impediments to the movement of liquidity across legal 
+entities. In addition, the FR 2052a provides detailed information that the Board uses to monitor 
+compliance with the Liquidity Coverage Ratio (LCR) and Net Stable Funding Ratio (NSFR)
+rules under the Board’s Regulation WW - Liquidity Risk Measurement, Standards, and 
+Monitoring (12 CFR Part 249). The information collected through the FR 2052a is not available 
+from other sources. If the Board did not have this information, it would not be able to conduct 
+critical liquidity supervision and monitoring activities.
+2
+Description of Information Collection
+The FR 2052a collects data regarding three general categories of inflows, outflows, and 
+supplemental items, subdivided into 13 distinct data categories and a mechanism for tracking 
+comments. These categories are designed to stratify the assets, liabilities, and supplemental 
+components of a banking organization’s liquidity risk profile based on products that can be 
+described with common data structures while maintaining a coherent framework for liquidity risk 
+reporting.
+The FR 2052a data categories also cover broad funding classifications by product, 
+outstanding balance, and purpose, each segmented by maturity date. Generally, the data 
+categories are classified as follows:
+• Inflows-Assets: Banking organizations report assets such as unencumbered assets, 
+borrowing capacity from central banks or Federal Home Loan Banks (FHLBs), 
+unrestricted reserve balances at central banks, restricted reserve balances at central banks, 
+unsettled asset purchases, forward asset purchases, and encumbered assets.
+• Inflows-Unsecured: Banking organizations report unsecured inflow transactions such as 
+onshore placements, offshore placements, required operational balances, excess 
+operational balances, outstanding draws on unsecured revolving facilities, other 
+unsecured loans, cash items in the process of collection, and short-term investments.
+• Inflows-Secured: Banking organizations report secured inflow transactions such as 
+reverse repurchase agreements, securities borrowing transactions, dollar rolls, collateral 
+swaps, margin loans, other secured loans where the collateral is rehypothecatable, 
+outstanding draws on secured revolving facilities, other secured loans where the collateral 
+is not rehypothecatable, synthetic customer longs, and synthetic firm sourcing.
+• Inflows-Other: Banking organizations report other inflow transactions such as derivatives 
+receivables, collateral called for receipt, sales in the to-be-announced market, undrawn 
+committed facilities purchased, lock-up balances, interest and dividends receivables, a net 
+30-day derivatives receivables measure, principal payments receivable on unencumbered 
+investment securities, and other cash inflow transactions.
+• Outflows-Wholesale: Banking organizations report wholesale outflow transactions such 
+as asset-backed commercial paper single-seller outflows, asset-backed commercial paper 
+multi-seller outflows, collateralized commercial paper, asset-backed securities, covered 
+bonds, tender option bonds, other asset-backed financing, commercial paper, onshore 
+borrowing, offshore borrowing, unstructured long-term debt, structured long-term debt, 
+government supported debt, unsecured notes, structured notes, wholesale certificates of 
+deposit, draws on committed facilities, free credits, and other unsecured wholesale 
+outflow transactions.
+• Outflows-Secured: Banking organizations report secured outflow transactions such as 
+repurchase agreements, securities lending transactions, dollar rolls, collateral swaps, 
+FHLB advances, outstanding secured funding from central banks for exceptional central 
+bank operations, customer short transactions, firm short transactions, synthetic customer 
+short transactions, synthetic firm financing transactions, and other secured outflow 
+transactions.
+• Outflows-Deposits: Banking organizations report deposit outflow transactions such as 
+transactional accounts, non-transactional relationship accounts, non-transactional non-
+3
+relationship accounts, operational account balances, excess balances in operational 
+accounts, non-operational account balances, operational escrow accounts, non-reciprocal 
+brokered accounts, stable affiliated sweep account balances, less stable affiliated sweep 
+account balances, non-affiliated sweep accounts, other product sweep accounts, 
+reciprocal accounts, other third-party deposits, and other deposit accounts.
+• Outflows-Other: Banking organizations report other outflow transactions such as 
+derivative payables, collateral called for delivery, purchases in the to-be-announced 
+market, credit facilities, liquidity facilities, retail mortgage commitments, trade finance 
+instruments, mark-to-market impact on derivative positions, loss of rehypothecation 
+rights due to a 1, 2, or 3 notch downgrade, loss of rehypothecation rights due to a change 
+in financial condition, total collateral required due to a 1, 2, or 3 notch downgrade, total 
+collateral required due to a change in financial condition, excess margin, unfunded term 
+margin, interest and dividends payable, a net 30-day derivative payables measure, other 
+outflows related to structured transactions, and other cash outflow transactions.
+• Supplemental-Derivatives and Collateral: Banking organizations report supplemental 
+information for derivatives and collateral such as gross derivative asset values, gross 
+derivative liability values, derivative settlement payments delivered and received, initial 
+margin posted on proprietary derivatives positions, initial margin posted on behalf of 
+customers, initial margin received, variation margin posted on proprietary derivatives 
+positions, variation margin posted on behalf of customers, variation margin received, 
+derivative central counterparty default fund contributions, other central counterparty 
+pledges and contributions, collateral disputes deliverables, collateral disputes receivables, 
+sleeper collateral deliverables, required collateral deliverables, sleeper collateral 
+receivables, derivative collateral substitution risk, derivative collateral substitution 
+capacity, other collateral substitution risk, and other collateral substitution capacity.
+• Supplemental-Liquidity Risk Measurement: Banking organizations report supplemental 
+information for liquidity risk measurement such as subsidiary liquidity that cannot be 
+transferred, subsidiary liquidity available for transfer, cash outflows that would arise 
+from the early termination of a hedge associated with unencumbered assets, outflows 
+from non-structured and structured debt maturing in greater than 30-days where the 
+banking organization is the primary market maker in that debt, the LCR, subsidiary 
+funding that cannot be transferred, subsidiary funding available for transfer, additional 
+funding requirement for off-balance sheet rehypothecated assets, and the NSFR.
+• Supplemental-Balance Sheet: Banking organizations report supplemental information for 
+balance sheet items such as regulatory capital element, other liabilities and assets not 
+otherwise captured under other FR 2052a balance sheet products, non-performing assets, 
+counterparty netting, and carrying value adjustments.
+• Supplemental-Informational: Banking organizations report supplemental information 
+such as long and short market value of client assets, gross client wires received and paid, 
+subsidiary liquidity that is not transferrable, and Federal Reserve Act section 23A 
+capacity.
+• Supplemental-Foreign Exchange: Banking organizations report foreign exchange 
+information such as foreign exchange spot, forwards and futures, and swap transactions.
+4
+The Board understands that respondents use information technology to comply with these 
+provisions. In order to comply with FR 2052a reporting requirements, respondents submit XML 
+files via a secure file transfer protocol to the Federal Reserve Bank of New York.
+Respondent Panel
+The FR 2052a is filed by banking organizations subject to Category I, II, III, or IV 
+standards under the Board’s Regulation YY - Enhanced Prudential Standards (12 CFR Part 252)
+and Regulation LL - Savings and Loan Holding Companies (12 CFR Part 238).
+1 The panel
+consists of (1) any top-tier U.S. bank holding company with $100 billion or more in total 
+consolidated assets that is not a subsidiary of a foreign banking organization, (2) any top-tier 
+U.S. savings and loan holding company with $100 billion or more in total consolidated assets 
+that is a covered depository institution holding company as defined by the LCR and NSFR rules 
+and is not a subsidiary of a foreign banking organization, and (3) any foreign banking 
+organization, as defined by the Board’s Regulation YY, with combined U.S. assets of $100 
+billion or more.
+Frequency and Time Schedule
+For U.S. Banking Organizations:
+U.S. banking organizations that are identified as (1) global systemically important bank 
+holding companies, (2) banking organizations subject to Category II standards, or (3) banking 
+organizations subject to Category III standards with average weighted short-term wholesale 
+funding of $75 billion or more must submit the FR 2052a each business day.
+U.S. banking organizations that are identified as (1) banking organizations subject to 
+Category III standards with average weighted short-term wholesale funding of less than $75 
+billion or (2) banking organizations subject to Category IV standards must submit a report 
+monthly.
+For Foreign Banking Organizations:
+Foreign banking organizations identified as (1) foreign banking organizations subject to 
+Category II standards or (2) foreign banking organizations subject to Category III standards with 
+average weighted short-term wholesale funding of $75 billion or more must submit a report on 
+each business day.
+Foreign banking organizations identified as (1) foreign banking organizations subject to 
+Category III standards with average weighted short-term wholesale funding of less than $75 
+billion or (2) foreign banking organizations subject to Category IV standards must submit a 
+report monthly.
+The FR 2052a report is collected on a more frequent cadence than quarterly given the 
+need for timely liquidity data to identify and monitor liquidity risks at individual firms as well as 
+in aggregate across the financial system.
+1 See 12 CFR 252.2; 12 CFR 238.10.
+5
+Public Availability of Data
+In general, data from the FR 2052a are confidential and are not publicly available. In 
+limited circumstances, aggregate data for multiple respondents, which do not reveal the identity 
+of any individual respondent, may be released.
+Legal Status
+The FR 2052a is authorized by provisions in the Bank Holding Company Act of 1956 
+(BHC Act), International Banking Act of 1978 (IBA), Home Owners’ Loan Act (HOLA), and 
+Dodd-Frank Wall Street Reform and Consumer Protection Act (Dodd-Frank Act). Specifically, 
+section 5(c) of the BHC Act authorizes the Board to require bank holding companies to submit 
+reports to the Board regarding their financial condition (12 U.S.C. § 1844(c)). Section 8(a) of the 
+IBA subjects foreign banking organizations to the provisions of the BHC Act (12 U.S.C. § 
+3106(a)). Section 10(b) of the HOLA authorizes the Board to require reports and examine 
+savings and loan holding companies (12 U.S.C. § 1467a(b)). Section 165 of the Dodd Frank Act 
+requires the Board to establish prudential standards for certain bank holding companies and 
+foreign banking organizations; these standards include liquidity requirements (12 U.S.C. § 
+5365). The FR 2052a is mandatory.
+The FR 2052a information collection is part of the Board’s supervisory process for 
+covered banking organizations. Therefore, such information is generally entitled to confidential 
+treatment under exemption 8 of the Freedom of Information Act (FOIA), which protects 
+information contained in “examination, operating, or condition reports” obtained in the bank 
+supervisory process (5 U.S.C. § 552(b)(8)). Additionally, to the extent a respondent submits 
+nonpublic commercial or financial information in connection with the FR 2052a, which is both 
+customarily and actually treated as private by the respondent, the respondent may request 
+confidential treatment pursuant to exemption 4 of FOIA (5 U.S.C. § 552(b)(4)).
+Consultation Outside the Agency
+There has been no consultation outside the Federal Reserve System.
+Public Comments
+On October 2, 2024, the Board published an initial notice in the Federal Register (89 FR 
+80240) requesting public comment for 60 days on the extension, without revision, of the 
+FR 2052a. The comment period for this notice expired on December 2, 2024. The Board did not 
+receive any comments. The Board adopted the extension, without revision, of the FR 2052a as 
+originally proposed. On February 7, 2025, the Board published a final notice in the Federal 
+Register (90 FR 9159).
+Estimate of Respondent Burden
+As shown in the table below, the estimated total annual burden for the FR 2052a is 
+1,027,896 hours. The number of respondents is based on the number of FR 2052a filings 
+6
+received in 2023. These reporting requirements represent approximately 15.4 percent of the 
+Board’s total paperwork burden.
+FR 2052a
+Estimated
+number of
+respondents2
+Estimated
+annual
+frequency
+Estimated
+average hours
+per response
+Estimated
+annual burden
+hours
+Daily 18 250 221 994,500
+Monthly 23 12 121 33,396
+Total 1,027,896
+The estimated total annual cost to the public for the FR 2052a is $71,798,536.
+3
+Sensitive Questions
+This information collection contains no questions of a sensitive nature, as defined by 
+OMB guidelines.
+Estimate of Cost to the Federal Reserve System
+The estimated cost to the Federal Reserve System for collecting and processing this 
+report is $515,200.
+2 Of these respondents, none are considered small entities as defined by the Small Business Administration (i.e., 
+entities with less than $850 million in total assets). Size standards effective March 17, 2023. See
+https://www.sba.gov/document/support-table-size-standards.
+3 Total cost to the responding public is estimated using the following formula: total burden hours, multiplied by the 
+cost of staffing, where the cost of staffing is calculated as a percent of time for each occupational group multiplied 
+by the group’s hourly rate and then summed (30% Office & Administrative Support at $23, 45% Financial 
+Managers at $84, 15% Lawyers at $85, and 10% Chief Executives at $124). Hourly rates for each occupational 
+group are the (rounded) mean hourly wages from the Bureau of Labor Statistics (BLS), Occupational Employment 
+and Wages, May 2023, published April 3, 2024, https://www.bls.gov/news.release/ocwage.t01.htm. Occupations are 
+defined using the BLS Standard Occupational Classification System, https://www.bls.gov/soc/.

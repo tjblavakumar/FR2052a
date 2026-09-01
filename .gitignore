@@ -8,3 +8,4 @@ dist/
 venv/
 .env
 bank_profiles/*.local.json
+analysis/
