@@ -1,0 +1,14 @@
+Forward Start Amount,#
+Forward Start Bucket,#
+Collateral Class,"HQLA, A-2, A-3, A-4, A-5, S-1, S-2, S-3, S-4, CB-1,
+CB-2, G-1, G-2, G-3, S-5, S-6, S-7, CB-3, E-1, E-2,
+IG-1, IG-2, S-8, CB-4, E-3, E-4, E-5, E-6, E-7, E-8, E-9,
+E-10, IG-3, IG-4, IG-5, IG-6, IG-7, IG-8, N-1, N-2,
+N-3, N-4, N-5, N-6, N-7, N-8, Y-1, Y-2, Y-3, C-1, P-1,
+P-2, Z-1"
+Treasury Control,#
+Accounting Designation,#
+Effective Maturity Bucket,≥ 1 Year
+Encumbrance Type,"Not Derivative VM, Derivative IM and DFC or
+Covered Federal Reserve Facility Funding"
+Internal Counterparty,#

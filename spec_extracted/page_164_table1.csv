@@ -1,0 +1,17 @@
+(111) Securities Cash Inflow Amount (§.33(e)),
+Field,Value
+Reporting Entity,LCR Firm
+PID,I.O.6 and I.O.8
+Product,Matches PID
+Maturity Amount,*
+Maturity Bucket,<= 30 calendar days but not Open
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Collateral Class,Non‐HQLA securities
+Collateral Value,#
+Treasury Control,#
+Counterparty,#
+G‐SIB,#
+Internal,#
+Internal Counterparty,#
+Business Line,#

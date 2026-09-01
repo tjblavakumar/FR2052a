@@ -1,0 +1,28 @@
+,,,,,,,,
+,,,,,,,,
+,Deposits,,Wholesale,,Secured,,Other,
+,"Reporting Entity text
+Product text",,"Reporting Entity text
+Product text",,"Reporting Entity text
+Product text",,"Reporting Entity text
+Product text",
+,Counterparty text,,Counterparty text,,Sub-Product text,,Counterparty text,
+,G-SIB text,,G-SIB text,,Maturity Amount numeric,,G-SIB text,
+,Maturity Amount numeric,,Maturity Amount numeric,,Maturity Bucket text,,Maturity Amount numeric,
+,Maturity Bucket text,,Maturity Bucket text,,Maturity Optionality text,,Maturity Bucket text,
+,"Maturity Optionality text
+Collateral Class text",,"Maturity Optionality text
+Collateral Class text",,"Forward Start Amount numeric
+Forward Start Bucket text",,"Forward Start Amount numeric
+Forward Start Bucket text",
+,Collateral Value numeric,,Collateral Value numeric,,Collateral Class text,,Collateral Class text,
+,Insured text,,Forward Start Amount numeric,,Collateral Value numeric,,Collateral Value numeric,
+,Trigger text,,Forward Start Bucket text,,Treasury Control text,,Internal text,
+,Rehypothecated text,,Internal text,,Internal text,,Internal Counterparty text,
+,Business Line text,,Internal Counterparty text,,Internal Counterparty text,,Business Line text,
+,Internal text,,Loss Absorbency text,,Business Line text,,,
+,Internal Counterparty text,,Business Line text,,Settlement text,,,
+,,,,,Rehypothecated text,,,
+,,,,,Counterparty text,,,
+,,,,,G-SIB text,,,
+,,,,,,,,

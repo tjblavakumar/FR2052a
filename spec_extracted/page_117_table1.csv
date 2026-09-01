@@ -1,0 +1,18 @@
+(12) Insured Placed Retail Deposits (§.32(a)(3)),
+Field,Value
+Reporting Entity,LCR Firm
+PID,O.D.14
+Product,Matches PID
+Counterparty,Retail or Small Business
+G‐SIB,#
+Maturity Amount,*
+Maturity Bucket,#
+Maturity Optionality,#
+Collateral Class,#
+Collateral Value,#
+Insured,FDIC
+Trigger,#
+Rehypothecated,#
+Business Line,#
+Internal,#
+Internal Counterparty,#

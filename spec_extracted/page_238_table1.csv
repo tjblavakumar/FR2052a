@@ -1,0 +1,22 @@
+(88) Other assets (§.106(a)(7)),
+Field,Value
+Reporting Entity,NSFR Entity
+Collection Reference,#
+PID,S.B.4
+Product,Matches PID
+Sub-Product,#
+Product Reference,#
+Sub-Product Reference,#
+Collateral Class,#
+Maturity Bucket,#
+Effective Maturity Bucket,< 1 Year or NULL
+Encumbrance Type,"Not Derivative VM, Derivative IM and DFC or
+Covered Federal Reserve Facility Funding"
+Market Value,#
+Maturity Amount,*
+Collateral Value,#
+Counterparty,#
+G-SIB,#
+Risk Weight,#
+Internal,#
+Internal Counterparty,#

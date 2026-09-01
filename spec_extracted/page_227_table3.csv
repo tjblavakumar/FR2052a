@@ -1,0 +1,13 @@
+"(69) Non-HQLA central bank debt securities maturing in ≥ 6 months, but < 1 year",
+(§.106(a)(4)(iv)),
+,
+Field,Value
+Reporting Entity,NSFR Entity
+PID,"I.A.1, 2, 3, 4, 5, 7"
+Product,Matches PID
+Sub-Product,"For I.A.3 and 4, Not Currency and Coin"
+Market Value,*
+Lendable Value,#
+Maturity Bucket,"≥ 6 Months, < 1 Year"
+Forward Start Amount,NULL
+Forward Start Bucket,NULL

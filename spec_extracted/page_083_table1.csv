@@ -1,0 +1,17 @@
+,Prefix,,,.,,,Table,,,.,,,Product #,
+"I
+(Inflows)",,,.,,,"A (Assets)
+U (Unsecured)
+S (Secured)
+O (Other)",,,.,,,#,,
+"O
+(Outflows)",,,.,,,"D (Deposits)
+W (Wholesale)
+S (Secured)
+O (Other)",,,.,,,#,,
+"S
+(Supplemental)",,,.,,,"DC (Derivatives & Collateral)
+L (Liquidity Risk Measurement)
+B (Balance Sheet)
+I (Informational Items)
+FX (Foreign Exchange)",,,.,,,#,,

@@ -1,0 +1,20 @@
+(55) Financial Non-Operational (§.32(h)(2)),
+Field,Value
+Reporting Entity,LCR Firm
+PID,"O.S.1, 2, 3, 7, 11"
+Product,Matches PID
+Counterparty,"Pension Fund, Bank, Broker‐Dealer, Investment
+Company or Advisor, Financial Market Utility,
+Other Supervised Non‐Bank Financial Entity, Non‐
+Regulated Fund"
+G‐SIB,#
+Maturity Amount,*
+Maturity Bucket,<= 30 calendar days
+Maturity Optionality,#
+Collateral Class,Other
+Collateral Value,#
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Internal,#
+Internal Counterparty,#
+Business Line,#

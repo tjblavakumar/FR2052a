@@ -1,0 +1,27 @@
+(64) Secured Funding L1 (§.32(j)(1)(i)),
+Field,Value
+Reporting Entity,LCR Firm
+PID,"O.D.4, 5, 6 and 7"
+Product,Matches PID
+Counterparty,"Non‐Financial Corporate, Sovereign, Central Bank
+(FRB and other central banks where the sovereign
+has not established its own outflow rate)5, GSE,
+PSE, MDB, Other Supranational, Pension Fund,
+Bank, Broker‐Dealer, Investment Company or
+Advisor, Financial Market Utility, Other Supervised
+Non‐Bank Financial Entity, Non‐Regulated Fund,
+Debt Issuing SPE, Other"
+G‐SIB,#
+Maturity Amount,*
+Maturity Bucket,<= 30 calendar days
+Maturity Optionality,
+Collateral Class,Level 1 HQLA
+Collateral Value,"To the extent the Collateral Value is less than the
+Maturity Amount, treat the Maturity Amount less
+the Collateral Value amount as unsecured
+wholesale funding under .32(h)"
+Insured,#
+Trigger,#
+Rehypothecated,#
+Business Line,#
+Internal,#

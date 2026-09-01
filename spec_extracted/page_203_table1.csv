@@ -1,0 +1,21 @@
+(18) Securities financing transactions with non-financials maturing in < 1 year (§.104(d)(2)),
+Field,Value
+Reporting Entity,NSFR Entity
+PID,"O.S.1, 2, 3, 5, 7, 11"
+Product,Matches PID
+Sub-Product,#
+Counterparty,Non-Financial Wholesale Entity
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,< 1 Year
+Maturity Optionality,#
+Collateral Class,#
+Collateral Value,#
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Treasury Control,#
+Internal,#
+Internal Counterparty,#
+Settlement,#
+Rehypothecated,#
+Business Line,#

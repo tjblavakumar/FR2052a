@@ -1,0 +1,18 @@
+(47) Sweeps that are not Fully Insured (§.32(g)(9)),
+Field,Value
+Reporting Entity,LCR Firm
+PID,"O.D.9, 10 and 11"
+Product,Matches PID
+Counterparty,Retail or Small Business
+G‐SIB,#
+Maturity Amount,*
+Maturity Bucket,#
+Maturity Optionality,#
+Collateral Class,#
+Collateral Value,#
+Insured,Not FDIC
+Trigger,#
+Rehypothecated,#
+Business Line,#
+Internal,#
+Internal Counterparty,#

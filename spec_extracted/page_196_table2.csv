@@ -1,0 +1,18 @@
+(4) Wholesale deposits maturing in ≥ 1 year (§.104(a)(2)),
+Field,Value
+Reporting Entity,NSFR Entity
+PID,"O.D.5, 6, 8, 10, 11, 13, 14, 15"
+Product,Matches PID
+Counterparty,Not Retail or Small Business
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,≥ 1 Year
+Maturity Optionality,#
+Collateral Class,#
+Collateral Value,#
+Insured,#
+Trigger,#
+Rehypothecated,#
+Internal,#
+Internal Counterparty,#
+Business Line,#

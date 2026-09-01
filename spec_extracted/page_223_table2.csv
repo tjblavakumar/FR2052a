@@ -1,0 +1,25 @@
+(60) Other secured lending to financials maturing in < 6 months (§.106(a)(3)(ii)),
+Field,Value
+Reporting Entity,NSFR Entity
+PID,"I.S.7, 8"
+Product,Matches PID
+Sub-Product,#
+Counterparty,Financial Sector Entity
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,< 6 Months
+Maturity Optionality,#
+Effective Maturity Bucket,< 6 Months or NULL
+Encumbrance Type,"Not Derivative VM, Derivative IM and DFC or
+Covered Federal Reserve Facility Funding"
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Collateral Class,#
+Collateral Value,#
+Unencumbered,#
+Treasury Control,#
+Internal,#
+Internal Counterparty,#
+Risk Weight,#
+Business Line,#
+Settlement,#

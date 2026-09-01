@@ -1,0 +1,21 @@
+,(9) O.D. PIDs for item 2.a,
+Field,,Value
+Reporting Entity,,FR Y‐15 Firm
+PID,,"O.D.5, 6, 8, 9, 10, 11, 13, 14, 15"
+Product,,Matches PID
+Counterparty,,Not Retail or Small Business
+G‐SIB,,#
+Maturity Amount,,*
+Maturity Bucket,,"Column A: <=30 days
+Column B: 31 to 90 days
+Column C: 91 to 180 days
+Column D: 181 days to 1 yr"
+Maturity Optionality,,#
+Collateral Class,,Level 2A HQLA
+Collateral Value,,#
+Insured,,#
+Trigger,,#
+Rehypothecated,,#
+Business Line,,#
+Internal,,#
+Internal Counterparty,,#

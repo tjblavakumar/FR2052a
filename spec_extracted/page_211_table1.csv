@@ -1,0 +1,18 @@
+(35) Non-reciprocal brokered retail deposits maturing in < 6 months (§.104(e)(2)),
+Field,Value
+Reporting Entity,NSFR Entity
+PID,O.D.8
+Product,Matches PID
+Counterparty,"Retail, Small Business"
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,"< 6 Months, but not Open"
+Maturity Optionality,#
+Collateral Class,#
+Collateral Value,#
+Insured,#
+Trigger,#
+Rehypothecated,#
+Internal,#
+Internal Counterparty,#
+Business Line,#

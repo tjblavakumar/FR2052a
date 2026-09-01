@@ -1,0 +1,16 @@
+(130) Asset Exchange Post L2A Receive L2A (§.33(f)(2)(vi)),
+Field,Value
+Reporting Entity,LCR Firm
+PID,I.S.4
+Product,Matches PID
+Sub‐Product,Level 2A HQLA
+Maturity Amount,*
+Maturity Bucket,<= 30 calendar days
+Maturity Optionality,#
+Effective Maturity Bucket,<= 30 calendar days or NULL but not Open
+Encumbrance Type,#
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Collateral Class,Level 2A HQLA
+Collateral Value,#
+Unencumbered,#

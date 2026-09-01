@@ -1,0 +1,18 @@
+(11) Other Retail Deposits (§.32(a)(2)),
+Field,Value
+Reporting Entity,LCR Firm
+PID,"O.D.1, 2, and 3"
+Product,Matches PID
+Counterparty,Retail or Small Business
+G‐SIB,#
+Maturity Amount,*
+Maturity Bucket,#
+Maturity Optionality,#
+Collateral Class,#
+Collateral Value,#
+Insured,"Not FDIC for PID = 1 and 2, and # for PID = 3"
+Trigger,#
+Rehypothecated,#
+Business Line,#
+Internal,#
+Internal Counterparty,#

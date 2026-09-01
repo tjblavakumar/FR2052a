@@ -1,0 +1,19 @@
+(111) Variation margin received eligible for netting (§.107(f)(1)(i)),
+Field,Value
+Reporting Entity,NSFR Entity
+PID,S.DC.10
+Product,Matches PID
+Sub-Product,"Rehypothecatable – Unencumbered,
+Rehypothecatable – Encumbered,
+Non-Segregated Cash"
+Sub-Product2,"Not OTC – Centralized (Agent) or Exchange-traded
+(Agent)"
+Market Value,*
+Collateral Class,Level 1 HQLA
+Collateral Level,Not Overcollateralized4
+Counterparty,#
+G-SIB,#
+Effective Maturity Bucket,#
+Encumbrance Type,#
+Netting Eligible,Y
+Treasury Control,#

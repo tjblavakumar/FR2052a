@@ -1,0 +1,21 @@
+"(95) Secured lending maturing in < 1 year, encumbered for ≥ 6 months, but < 1 year",
+(§.106(c)(1)(ii) & §.106(d)(1)),
+,
+Field,Value
+Reporting Entity,NSFR Entity
+PID,"I.S.1, 2, 3, 5 – 8"
+Product,Matches PID
+Sub-Product,#
+Counterparty,#
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,< 1 Year
+Maturity Optionality,#
+Effective Maturity Bucket,"≥ 6 Months, < 1 Year"
+Encumbrance Type,"Not Derivative VM, Derivative IM and DFC or
+Covered Federal Reserve Facility Funding"
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Collateral Class,#
+Collateral Value,#
+Unencumbered,#

@@ -1,0 +1,11 @@
+(65) Operational deposits placed (§.106(a)(4)(iii)),
+Field,Value
+Reporting Entity,NSFR Entity
+PID,I.U.3
+Product,Matches PID
+Counterparty,Financial Sector Entity
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,#
+Maturity Optionality,#
+Effective Maturity Bucket,< 6 Months or NULL

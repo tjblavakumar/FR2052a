@@ -1,0 +1,18 @@
+(25) Operational deposits (§.104(d)(6)),
+Field,Value
+Reporting Entity,NSFR Entity
+PID,"O.D.4, 7"
+Product,Matches PID
+Counterparty,#
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,#
+Maturity Optionality,#
+Collateral Class,#
+Collateral Value,#
+Insured,#
+Trigger,#
+Rehypothecated,#
+Internal,#
+Internal Counterparty,#
+Business Line,#

@@ -1,0 +1,28 @@
+(83) Secured but Lower Unsecured Rate (§.32(j)(2)),
+Field,Value
+Reporting Entity,LCR Firm
+PID,O.D.4 (only collateralized deposits)
+Product,Matches PID
+Counterparty,"Non‐Financial Corporate, PSE, Other
+Supranational, Pension Fund, Bank, Broker‐
+Dealer, Investment Company or Advisor, Financial
+Market Utility, Other Supervised Non‐Bank
+Financial Entity, Non‐Regulated Fund, Debt
+Issuing SPE, Other; if FDIC insured: Sovereigns,
+GSEs, MDBs, Central Bank (FRB and other central
+banks where the sovereign has not established its
+own outflow
+rate)"
+G‐SIB,#
+Maturity Amount,*
+Maturity Bucket,<= 30 calendar days
+Maturity Optionality,#
+Collateral Class,"If FDIC insured: Not Level 1; if not FDIC insured:
+Level 2B or Non‐HQLA"
+Collateral Value,#
+Insured,*
+Trigger,#
+Rehypothecated,N
+Business Line,#
+Internal,#
+Internal Counterparty,#

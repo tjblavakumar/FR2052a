@@ -1,0 +1,10 @@
+(134) Asset Exchange Post Non-HQLA Receive L2B (§.33(f)(2)(x)),
+Field,Value
+Reporting Entity,LCR Firm
+PID,I.S.4
+Product,Matches PID
+Sub‐Product,Level 2B HQLA
+Maturity Amount,*
+Maturity Bucket,<= 30 calendar days
+Maturity Optionality,#
+Effective Maturity Bucket,<= 30 calendar days or NULL but not Open

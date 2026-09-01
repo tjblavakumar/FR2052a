@@ -1,0 +1,27 @@
+(120) Secured Lending with L2A HQLA (§.33(f)(1)(iv)),
+Field,Value
+Reporting Entity,LCR Firm
+PID,"I.S.1, 2, 3, 5, 6, 7 and 8"
+Product,Matches PID
+Sub‐Product,#
+Maturity Amount,*
+Maturity Bucket,<= 30 calendar days
+Maturity Optionality,#
+Effective Maturity Bucket,NULL
+Encumbrance Type,#
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Collateral Class,Level 2A HQLA
+Collateral Value,"To the extent the Collateral Value is less than the
+Maturity Amount, treat the Maturity Amount less
+the Collateral Value amount as unsecured
+wholesale lending under .33(d)"
+Unencumbered,Y
+Treasury Control,Y
+Internal,#
+Internal Counterparty,#
+Risk Weight,#
+Business Line,#
+Settlement,#
+Counterparty,Not Retail or Small Business
+G‐SIB,#

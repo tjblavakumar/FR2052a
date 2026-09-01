@@ -1,0 +1,16 @@
+Product,Matches PID
+Sub-Product,#
+Product Reference,#
+Sub-Product Reference,#
+Collateral Class,#
+Maturity Bucket,≥ 1 Year
+Effective Maturity Bucket,#
+Encumbrance Type,#
+Market Value,#
+Maturity Amount,*
+Collateral Value,#
+Counterparty,Not Retail or Small Business
+G-SIB,#
+Risk Weight,#
+Internal,#
+Internal Counterparty,#

@@ -1,0 +1,21 @@
+"(33) Other liabilities to wholesale entities maturing in ≥ 6 months, but < 1 year (§.104(d)(10))",
+Field,Value
+Reporting Entity,NSFR Entity
+Collection Reference,#
+PID,S.B.2
+Product,Matches PID
+Sub-Product,#
+Product Reference,#
+Sub-Product Reference,#
+Collateral Class,#
+Maturity Bucket,"≥ 6 Months, < 1 Year"
+Effective Maturity Bucket,#
+Encumbrance Type,#
+Market Value,#
+Maturity Amount,*
+Collateral Value,#
+Counterparty,Not Retail or Small Business
+G-SIB,#
+Risk Weight,#
+Internal,#
+Internal Counterparty,#

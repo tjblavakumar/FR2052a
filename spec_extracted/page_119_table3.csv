@@ -1,0 +1,18 @@
+(18) Structured Transaction Outflow Amount (§.32(b)),
+(The total amount for 32(b) is the relevant commitment amounts plus the incremental increase,
+from O.O.21),
+Field,Value
+Reporting Entity,LCR Firm
+PID,O.O.21 (adds the incremental amount)
+Product,Matches PID
+Counterparty,#
+G‐SIB,#
+Maturity Amount,*
+Maturity Bucket,<= 30 calendar days
+Forward Start Amount,#
+Forward Start Bucket,#
+Collateral Class,#
+Collateral Value,#
+Internal,#
+Internal Counterparty,#
+Business Line,#

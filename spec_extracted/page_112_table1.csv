@@ -1,0 +1,16 @@
+"(1) High-Quality Liquid Assets (Subpart C, §.20-.22)",
+Field,Value
+Reporting Entity,LCR Firm
+PID,"I.A.1, 2, and 3"
+Product,Matches PID
+Sub‐Product,Not Currency and Coin
+Market Value,*
+Lendable Value,#
+Maturity Bucket,"Open for I.A.3, # otherwise"
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Collateral Class,HQLA (except A‐0‐Q for I.A.2)
+Treasury Control,Y
+Accounting Designation,#
+Encumbrance Type,NULL
+Internal Counterparty,#

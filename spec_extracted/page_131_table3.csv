@@ -1,0 +1,14 @@
+(48) Insured Unsecured Wholesale Non-Operational Non-Financial (§.32(h)(1)(i)),
+Field,Value
+Reporting Entity,LCR Firm
+PID,O.D.5 and 6
+Product,Matches PID
+Counterparty,"Non‐Financial Corporate, Sovereign, Central
+Bank,
+GSE, PSE, MDB, Other Supranational, Debt
+Issuing SPE, Other"
+G‐SIB,#
+Maturity Amount,*
+Maturity Bucket,<= 30 calendar days
+Maturity Optionality,#
+Collateral Class,NULL or Other

@@ -1,0 +1,17 @@
+(23) Non-Financial Corporate Credit Facilities (§.32(e)(1)(iii)),
+Field,Value
+Reporting Entity,LCR Firm
+PID,O.O.4
+Product,Matches PID
+Counterparty,"Non‐Financial Corporate, Sovereign, Central
+Bank, GSE, PSE, MDB, Other Supranational"
+G‐SIB,#
+Maturity Amount,*
+Maturity Bucket,<= 30 calendar days
+Forward Start Amount,#
+Forward Start Bucket,#
+Collateral Class,*
+Collateral Value,*
+Internal,#
+Internal Counterparty,#
+Business Line,#

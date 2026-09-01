@@ -1,0 +1,18 @@
+(2) Subordinated debt qualifying as an NSFR regulatory capital element (§.104(a)(1)),
+Field,Value
+Reporting Entity,NSFR Entity
+PID,"O.W.11, 12"
+Product,Matches PID
+Counterparty,#
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,#
+Maturity Optionality,#
+Collateral Class,#
+Collateral Value,#
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Internal,#
+Internal Counterparty,#
+Loss Absorbency,Capital
+Business Line,#

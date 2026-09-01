@@ -1,0 +1,18 @@
+(40) Other Brokered Retail Deposits Maturing later than 30 days (§.32(g)(2)),
+Field,Value
+Reporting Entity,LCR Firm
+PID,O.D.8
+Product,Matches PID
+Counterparty,Retail or Small Business
+G‐SIB,#
+Maturity Amount,*
+Maturity Bucket,> 30 calendar days
+Maturity Optionality,#
+Collateral Class,#
+Collateral Value,#
+Insured,#
+Trigger,#
+Rehypothecated,#
+Business Line,#
+Internal,#
+Internal Counterparty,#

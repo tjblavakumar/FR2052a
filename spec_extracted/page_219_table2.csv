@@ -1,0 +1,21 @@
+(53) Trade date receivables that are expected to settle (§.106(a)(1)(v)),
+Field,Value
+Reporting Entity,NSFR Entity
+PID,O.S.8
+Product,Matches PID
+Sub-Product,Unsettled (Regular Way)
+Counterparty,#
+G-SIB,#
+Maturity Amount,#
+Maturity Bucket,#
+Maturity Optionality,#
+Collateral Class,#
+Collateral Value,#
+Forward Start Amount,*
+Forward Start Bucket,#
+Treasury Control,#
+Internal,#
+Internal Counterparty,#
+Settlement,#
+Rehypothecated,#
+Business Line,#

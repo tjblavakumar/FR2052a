@@ -1,0 +1,19 @@
+(81) Secured but Lower Unsecured Rate (§.32(j)(2)),
+Field,Value
+Reporting Entity,LCR Firm
+PID,O.D.5 and 6
+Product,Matches PID
+Counterparty,"Non‐Financial Corporate, PSE, Other
+Supranational, Debt Issuing SPE, Other"
+G‐SIB,#
+Maturity Amount,*
+Maturity Bucket,<= 30 calendar days
+Maturity Optionality,#
+Collateral Class,Level 2B HQLA or Non‐HQLA
+Collateral Value,#
+Insured,*
+Trigger,#
+Rehypothecated,N
+Business Line,#
+Internal,#
+Internal Counterparty,#

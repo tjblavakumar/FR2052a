@@ -1,0 +1,18 @@
+(10) Stable Retail Deposits (§.32(a)(1)),
+Field,Value
+Reporting Entity,LCR Firm
+PID,O.D.1 and 2
+Product,Matches PID
+Counterparty,Retail or Small Business
+G‐SIB,#
+Maturity Amount,*
+Maturity Bucket,#
+Maturity Optionality,#
+Collateral Class,#
+Collateral Value,#
+Insured,FDIC
+Trigger,#
+Rehypothecated,#
+Business Line,#
+Internal,#
+Internal Counterparty,#

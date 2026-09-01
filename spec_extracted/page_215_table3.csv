@@ -1,0 +1,15 @@
+(45) Currency and coin (§.106(a)(1)(i)),
+Field,Value
+Reporting Entity,NSFR Entity
+PID,"I.A.3, 4"
+Product,Matches PID
+Sub-Product,Currency and Coin
+Market Value,*
+Lendable Value,#
+Maturity Bucket,#
+Forward Start Amount,#
+Forward Start Bucket,#
+Collateral Class,A-0-Q
+Treasury Control,#
+Accounting Designation,#
+Effective Maturity Bucket,#

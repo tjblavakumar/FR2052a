@@ -1,0 +1,22 @@
+(95) Asset Exchange Post Rehypothecated Assets >30 days Receive L2A (§.32(j)(3)(xi)),
+Field,Value
+Reporting Entity,LCR Firm
+PID,I.S.4
+Product,Matches PID
+Sub‐Product,Level 2A HQLA
+Maturity Amount,*
+Maturity Bucket,<= 30 calendar days
+Maturity Optionality,#
+Effective Maturity Bucket,> 30 calendar days or Open
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Collateral Class,#
+Collateral Value,#
+Unencumbered,#
+Treasury Control,#
+Internal,#
+Internal Counterparty,#
+Business Line,#
+Settlement,#
+Counterparty,#
+G‐SIB,

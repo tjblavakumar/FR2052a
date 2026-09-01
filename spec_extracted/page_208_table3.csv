@@ -1,0 +1,15 @@
+(30) Interest payable to retail customers (§.104(d)(9)),
+Field,Value
+Reporting Entity,NSFR Entity
+PID,O.O.19
+Product,Matches PID
+Counterparty,"Retail, Small Business"
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,#
+Collateral Class,#
+Collateral Value,#
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Internal,#
+Internal Counterparty,#

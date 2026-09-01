@@ -1,0 +1,12 @@
+(73) Other secured retail loans with ≤ 20% risk weight maturing in ≥ 1 year (§.106(a)(5)(ii)),
+Field,Value
+Reporting Entity,NSFR Entity
+PID,I.S.8
+Product,Matches PID
+Sub-Product,#
+Counterparty,"Retail, Small Business"
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,≥ 1 Year
+Maturity Optionality,#
+Effective Maturity Bucket,< 1 Year or NULL

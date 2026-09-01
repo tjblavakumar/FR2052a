@@ -1,0 +1,18 @@
+(58) Not Fully Insured Operational Deposits (§.32(h)(4)),
+Field,Value
+Reporting Entity,LCR Firm
+PID,O.D.4
+Product,Matches PID
+Counterparty,All except Retail or Small Business
+G‐SIB,#
+Maturity Amount,*
+Maturity Bucket,<= 30 calendar days
+Maturity Optionality,#
+Collateral Class,NULL or Other
+Collateral Value,#
+Insured,Not FDIC
+Trigger,#
+Rehypothecated,#
+Business Line,#
+Internal,#
+Internal Counterparty,#

@@ -1,0 +1,21 @@
+(1) NSFR regulatory capital element (§.104(a)(1)),
+Field,Value
+Reporting Entity,NSFR Entity
+Collection Reference,#
+PID,S.B.1
+Product,Matches PID
+Sub-Product,#
+Product Reference,#
+Sub-Product Reference,#
+Collateral Class,#
+Maturity Bucket,#
+Effective Maturity Bucket,#
+Encumbrance Type,#
+Market Value,#
+Maturity Amount,*
+Collateral Value,#
+Counterparty,#
+G-SIB,#
+Risk Weight,#
+Internal,#
+Internal Counterparty,#

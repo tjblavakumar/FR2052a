@@ -1,0 +1,23 @@
+"(8) Secured Funding Unwind (Subpart C, §.21)",
+Field,Value
+Reporting Entity,LCR Firm
+PID,"O.S.1, 2, 3, 5, 6, 7 and 11"
+Product,Matches PID
+SID,Matches Sub‐Product
+Sub‐Product,"For O.S.7, cannot be Unsettled (Regular Way) or
+Unsettled (Forward), # otherwise"
+Maturity Amount,*
+Maturity Bucket,<= 30 calendar days
+Maturity Optionality,#
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Collateral Class,HQLA
+Collateral Value,*
+Treasury Control,Y
+Internal,#
+Internal Counterparty,#
+Business Line,#
+Settlement,#
+Rehypothecated,#
+Counterparty,#
+G‐SIB,#

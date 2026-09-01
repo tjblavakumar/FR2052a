@@ -1,0 +1,16 @@
+(40) Interest payable to financials and central banks in < 6 months (§.104(e)(4)),
+Field,Value
+Reporting Entity,NSFR Entity
+PID,O.O.19
+Product,Matches PID
+Counterparty,"Financial Sector Entity, Central Bank"
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,< 6 Months
+Collateral Class,#
+Collateral Value,#
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Internal,#
+Internal Counterparty,#
+Business Line,#

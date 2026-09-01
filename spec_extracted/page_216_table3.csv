@@ -1,0 +1,17 @@
+(47) Central bank reserve balances (§.106(a)(1)(iii) & (iv)),
+Field,Value
+Reporting Entity,NSFR Entity
+PID,"I.A.3, 4"
+Product,Matches PID
+Sub-Product,Not Currency and Coin
+Market Value,*
+Lendable Value,#
+Maturity Bucket,< 6 Months
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Collateral Class,A-0-Q
+Treasury Control,#
+Accounting Designation,#
+Effective Maturity Bucket,#
+Encumbrance Type,#
+Internal Counterparty,#

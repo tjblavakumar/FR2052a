@@ -1,0 +1,17 @@
+"(68) Interest receivable from central banks in ≥ 6 months, but < 1 year (§.106(a)(4)(iv))",
+Field,Value
+Reporting Entity,NSFR Entity
+PID,I.O.6
+Product,Matches PID
+Counterparty,Central Bank
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,"≥ 6 Months, < 1 Year"
+Collateral Class,#
+Co llateral Value,#
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Treasury Control,#
+Internal,#
+Internal Counterparty,#
+Business Line,#

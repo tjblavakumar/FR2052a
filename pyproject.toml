@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fr2052a-mockgen"
+version = "0.1.0"
+description = "Mock data generator for the Federal Reserve FR 2052a liquidity report"
+requires-python = ">=3.10"
+dependencies = ["pandas>=2.0"]
+
+[project.optional-dependencies]
+extract = ["pdfplumber>=0.10"]
+profiles = ["requests>=2.28"]
+test = ["pytest>=7.0"]
+
+[project.scripts]
+generate = "fr2052a_mockgen.cli:main"
+
+[tool.setuptools]
+packages = ["fr2052a_mockgen"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,18 @@
+"(90) HQLA encumbered for ≥ 6 Months, but < 1 Year (§.106(c)(1)(ii) & §.106(d)(2))",
+Field,Value
+Reporting Entity,NSFR Entity
+PID,I.A.7
+Product,Matches PID
+Sub-Product,#
+Market Value,*
+Lendable Value,#
+Maturity Bucket,#
+Forward Start Amount,#
+Forward Start Bucket,#
+Collateral Class,HQLA
+Treasury Control,#
+Accounting Designation,#
+Effective Maturity Bucket,"≥ 6 Months, < 1 Year"
+Encumbrance Type,"Not Derivative VM, Derivative IM and DFC or
+Covered Federal Reserve Facility Funding"
+Internal Counterparty,#

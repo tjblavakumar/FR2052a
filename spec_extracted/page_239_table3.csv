@@ -1,0 +1,16 @@
+"(91) Non-HQLA central bank securities maturing in < 1 Year, encumbered for ≥ 6 Months, but < 1 Year",
+(§.106(c)(1)(ii) & §.106(d)(2)),
+,
+Field,Value
+Reporting Entity,NSFR Entity
+PID,I.A.7
+Product,Matches PID
+Sub-Product,#
+Market Value,*
+Lendable Value,#
+Maturity Bucket,< 1 Year
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Collateral Class,"CB-1, CB-2, CB-3, CB-4"
+Treasury Control,#
+Accounting Designation,#

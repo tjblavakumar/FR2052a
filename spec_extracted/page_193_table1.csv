@@ -1,0 +1,17 @@
+Reference,Meaning
+*,"Values relevant to the NSFR (e.g., value field aggregated to determine ASF
+or RSF amount)"
+#,Values not relevant to the NSFR
+NULL,Should not have an associated value
+Level 1 HQLA,"[Collateral Class] values of: A-0-Q, A-1-Q, A-2-Q, A-3-Q, A-4-Q, A-5-Q, S-1-Q,
+S-2-Q, S-3-Q, S-4-Q, CB-1-Q, CB-2-Q"
+Level 2A HQLA,"[Collateral Class] values of: G-1-Q, G-2-Q, G-3-Q, S-5-Q, S-6-Q, S-7-Q, CB-3-Q"
+Level 2B HQLA,"[Collateral Class] values of: E-1-Q, E-2-Q, IG-1-Q, IG-2-Q"
+HQLA,"[Collateral Class] values listed in Level 1, Level 2A and Level 2B HQLA above"
+Financial Sector Entity,"[Counterparty] values of: Pension Fund, Bank, Broker-Dealer, Investment
+Company or Advisor, Financial Market Utility, Other Supervised Non-Bank
+Financial Entity, Non-Regulated Fund"
+"Non-Financial
+Wholesale Entity","[Counterparty] values of: Non-Financial Corporate, Sovereign, Government
+Sponsored Entity, Public Sector Entity, Multilateral Development Bank,
+Other Supranational, Debt Issuing SPE, Other"

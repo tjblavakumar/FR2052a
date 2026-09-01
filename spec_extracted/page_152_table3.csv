@@ -1,0 +1,18 @@
+(88) Asset Exchange Post L1 Receive Non-HQLA (§.32(j)(3)(iv)),
+Field,Value
+Reporting Entity,LCR Firm
+PID,I.S.4
+Product,Matches PID
+Sub‐Product,Non‐HQLA or No Collateral Pledged
+Maturity Amount,#
+Maturity Bucket,<= 30 calendar days
+Maturity Optionality,#
+Effective Maturity Bucket,NULL or <= 30 calendar days but not open
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Collateral Class,Level 1 HQLA
+Collateral Value,*
+Unencumbered,#
+Treasury Control,#
+Internal,#
+Internal Counterparty,#

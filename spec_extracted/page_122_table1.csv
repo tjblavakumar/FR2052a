@@ -1,0 +1,13 @@
+Counterparty,"Non‐Financial Corporate, Sovereign, Central
+Bank, GSE, PSE, MDB, Other Supranational,
+Municipalities for VRDN Structures"
+G‐SIB,#
+Maturity Amount,*
+Maturity Bucket,<= 30 calendar days for O.O.5; # for O.O.18
+Forward Start Amount,#
+Forward Start Bucket,#
+Collateral Class,*
+Collateral Value,*
+Internal,#
+Internal Counterparty,#
+Business Line,#

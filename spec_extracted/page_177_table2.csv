@@ -1,0 +1,17 @@
+(135) Broker-Dealer Segregated Account Inflow Amount (§.33(g)),
+Field,Value
+Reporting Entity,LCR Firm
+PID,I.O.5
+Product,Matches PID
+Maturity Amount,*
+Maturity Bucket,<= 30 calendar days
+Forward Start Amount,#
+Forward Start Bucket,#
+Collateral Class,#
+Collateral Value,#
+Treasury Control,#
+Counterparty,#
+G‐SIB,#
+Internal,#
+Internal Counterparty,#
+Business Line,#

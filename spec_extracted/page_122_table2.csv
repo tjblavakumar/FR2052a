@@ -1,0 +1,17 @@
+(25) Bank Commitments (§.32(e)(1)(v)),
+Field,Value
+Reporting Entity,LCR Firm
+PID,"O.O.4, 5 and 18"
+Product,Matches PID
+Counterparty,Bank
+G‐SIB,#
+Maturity Amount,*
+Maturity Bucket,"<= 30 calendar days for O.O.4, O.O.5; # for O.O.18"
+Forward Start Amount,#
+Forward Start Bucket,#
+Collateral Class,*
+Collateral Value,*
+Internal,Y
+Internal Counterparty,"Bank not from the U.S. or Bank from the U.S. not
+subject to the LCR"
+Business Line,#

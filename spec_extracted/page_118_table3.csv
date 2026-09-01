@@ -1,0 +1,20 @@
+(16) Other Retail Funding (§.32(a)(5)),
+Field,Value
+Reporting Entity,LCR Firm
+PID,"O.S.1, 2, 7 and 11"
+Product,Matches PID
+Sub‐Product,"For O.S.7, cannot be Unsettled (Regular Way) or
+Unsettled (Forward), # otherwise"
+Maturity Amount,*
+Maturity Bucket,#
+Maturity Optionality,#
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Collateral Class,#
+Collateral Value,#
+Treasury Control,#
+Internal,#
+Internal Counterparty,#
+Business Line,#
+Settlement,#
+Rehypothecated,#

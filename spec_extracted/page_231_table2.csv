@@ -1,0 +1,17 @@
+(76) Unsecured loans assigned ≤ 20% risk weight provided to non-financial customers and,
+maturing in ≥ 1 year (§.106(a)(5)(ii)),
+Field,Value
+Reporting Entity,NSFR Entity
+PID,"I.U.1, 2, 5, 6"
+Product,Matches PID
+Counterparty,Not Financial Sector Entity
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,≥ 1 Year
+Maturity Optionality,#
+Effective Maturity Bucket,< 1 Year or NULL
+Encumbrance Type,"Not Derivative VM, Derivative IM and DFC or
+Covered Federal Reserve Facility Funding"
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Internal,#

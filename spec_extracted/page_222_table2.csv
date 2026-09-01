@@ -1,0 +1,25 @@
+(59) Lending to financials secured by rehypothecatable non-level 1 HQLA collateral,
+maturing in < 6 months (§.106(a)(3)(ii)),
+,
+Field,Value
+Reporting Entity,NSFR Entity
+PID,"I.S.1, 2, 3, 5, 6"
+Product,Matches PID
+Sub-Product,#
+Counterparty,Financial Sector Entity
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,< 6 Months
+Maturity Optionality,#
+Effective Maturity Bucket,< 6 Months or NULL
+Encumbrance Type,"Not Derivative VM, Derivative IM and DFC or
+Covered Federal Reserve Facility Funding"
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Collateral Class,Not Level 1 HQLA
+Collateral Value,#
+Unencumbered,#
+Treasury Control,#
+Internal,#
+Internal Counterparty,#
+Risk Weight,#

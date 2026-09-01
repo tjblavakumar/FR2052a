@@ -1,0 +1,16 @@
+"(32) Interest payable to wholesale entities in ≥ 6 months, but < 1 year (§.104(d)(10))",
+Field,Value
+Reporting Entity,NSFR Entity
+PID,O.O.19
+Product,Matches PID
+Counterparty,Not Retail or Small Business
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,"≥ 6 Months, < 1 Year"
+Collateral Class,#
+Collateral Value,#
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Internal,#
+Internal Counterparty,#
+Business Line,#

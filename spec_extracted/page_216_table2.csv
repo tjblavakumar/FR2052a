@@ -1,0 +1,19 @@
+(46) Cash items in process (§.106(a)(1)(ii)),
+Field,Value
+Reporting Entity,NSFR Entity
+PID,I.U.7
+Product,Matches PID
+Counterparty,#
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,#
+Maturity Optionality,#
+Effective Maturity Bucket,< 6 Months or NULL
+Encumbrance Type,"Not Derivative VM, Derivative IM and DFC or
+Covered Federal Reserve Facility Funding"
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Internal,#
+Internal Counterparty,#
+Risk Weight,#
+Business Line,#

@@ -1,0 +1,20 @@
+,"(92) Asset Exchange Post L2B Receive L1, L2A or L2B (§.32(j)(3)(viii))",
+Field,,Value
+Reporting Entity,,LCR Firm
+PID,,I.S.4
+Product,,Matches PID
+Sub‐Product,,HQLA
+Maturity Amount,,#
+Maturity Bucket,,<= 30 calendar days
+Maturity Optionality,,#
+Effective Maturity Bucket,,NULL or <= 30 calendar days but not open
+Forward Start Amount,,NULL
+Forward Start Bucket,,NULL
+Collateral Class,,Level 2B HQLA
+Collateral Value,,*
+Unencumbered,,#
+Treasury Control,,#
+Internal,,#
+Internal Counterparty,,#
+Business Line,,#
+Settlement,,#

@@ -1,0 +1,24 @@
+(106) Additional RSF for IM and DFC pledged – secured lending (§.107(b)(6) & (7)),
+Field,Value
+Reporting Entity,NSFR Entity
+PID,"I.S.1, 2, 3, 5, 6, 7, 8"
+Product,Matches PID
+Sub-Product,#
+Counterparty,Financial Sector Entity
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,≥ 1 Year
+Maturity Optionality,#
+Effective Maturity Bucket,#
+Encumbrance Type,Derivative IM and DFC
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Collateral Class,#
+Collateral Value,#
+Unencumbered,#
+Treasury Control,#
+Internal,#
+Internal Counterparty,#
+Risk Weight,#
+Business Line,#
+Settlement,#

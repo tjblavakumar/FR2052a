@@ -1,0 +1,16 @@
+(20) Mortgage Commitment Outflow Amount (§.32(d)),
+Field,Value
+Reporting Entity,LCR Firm
+PID,O.O.6
+Product,Matches PID
+Counterparty,Retail
+G‐SIB,#
+Maturity Amount,*
+Maturity Bucket,<= 30 calendar days
+Forward Start Amount,#
+Forward Start Bucket,#
+Collateral Class,#
+Collateral Value,#
+Internal,#
+Internal Counterparty,#
+Business Line,#

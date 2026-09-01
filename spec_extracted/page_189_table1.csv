@@ -1,0 +1,16 @@
+,Regulated Fund
+G‐SIB,#
+Maturity Amount,*
+Maturity Bucket,"Column A: <=30 days
+Column B: 31 to 90 days
+Column C: 91 to 180 days
+Column D: 181 days to 1 yr"
+Maturity Optionality,#
+Collateral Class,NULL or Other
+Collateral Value,#
+Insured,#
+Trigger,#
+Rehypothecated,#
+Business Line,#
+Internal,#
+Internal Counterparty,#

@@ -1,0 +1,9 @@
+"(11) Non-relationship retail deposits, excluding sweeps and brokered deposits (§.104(c)(1))",
+Field,Value
+Reporting Entity,NSFR Entity
+PID,"O.D.3, O.D.14"
+Product,Matches PID
+Counterparty,"Retail, Small Business"
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,#

@@ -1,0 +1,18 @@
+Maturity Bucket,"Column A: <=30 days
+Column B: 31 to 90 days
+Column C: 91 to 180 days
+Column D: 181 days to 1 yr"
+Maturity Optionality,#
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Collateral Class,Level 2A HQLA
+Collateral Value,#
+Unencumbered,#
+Treasury Control,#
+Internal,#
+Internal Counterparty,#
+Business Line,#
+Settlement,#
+Rehypothecated,#
+Counterparty,#
+G‐SIB,#

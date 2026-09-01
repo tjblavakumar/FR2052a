@@ -1,0 +1,7 @@
+pandas>=2.0
+# extraction helper only (tools/extract_spec.py), not required by the app runtime
+pdfplumber>=0.10
+# LLM profile generation only (tools/generate_profiles.py), not required by the app runtime
+requests>=2.28
+# tests
+pytest>=7.0

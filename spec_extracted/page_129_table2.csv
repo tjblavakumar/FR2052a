@@ -1,0 +1,18 @@
+(42) Not Fully Insured Other Brokered Retail Deposits with No Maturity (§.32(g)(4)),
+Field,Value
+Reporting Entity,LCR Firm
+PID,O.D.8
+Product,Matches PID
+Counterparty,Retail or Small Business
+G‐SIB,#
+Maturity Amount,*
+Maturity Bucket,Open
+Maturity Optionality,#
+Collateral Class,#
+Collateral Value,#
+Insured,Not FDIC
+Trigger,#
+Rehypothecated,#
+Business Line,#
+Internal,#
+Internal Counterparty,#

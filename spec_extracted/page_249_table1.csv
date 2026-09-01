@@ -1,0 +1,20 @@
+(110) Gross NSFR derivative asset amount (§.107(f)(1)),
+Field,Value
+Reporting Entity,NSFR Entity
+PID,S.DC.1
+Product,Matches PID
+Sub-Product,#
+Sub-Product2,"Not OTC – Centralized (Agent) or Exchange-traded
+(Agent)"
+Market Value,*
+Collateral Class,#
+Collateral Level,#
+Counterparty,#
+G-SIB,#
+Effective Maturity Bucket,#
+Encumbrance Type,#
+Netting Eligible,#
+Treasury Control,#
+Internal,#
+Internal Counterparty,#
+Business Line,#

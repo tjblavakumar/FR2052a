@@ -1,0 +1,72 @@
+{
+  "bank": "Chase",
+  "description": "A massive diversified institution characterized by a dominant retail deposit base, significant wholesale funding via repo markets, and extensive derivative collateral management.",
+  "table_weights": {
+    "I.A": 0.15,
+    "I.U": 0.05,
+    "I.S": 0.15,
+    "I.O": 0.05,
+    "O.W": 0.15,
+    "O.S": 0.1,
+    "O.D": 0.2,
+    "O.O": 0.05,
+    "S.DC": 0.05,
+    "S.L": 0.02,
+    "S.B": 0.02,
+    "S.I": 0.01
+  },
+  "product_weights": {
+    "O.D.1": 0.4,
+    "O.D.2": 0.3,
+    "I.S.1": 0.15,
+    "O.W.1": 0.1,
+    "S.DC.1": 0.05
+  },
+  "amount_scale": {
+    "I.A": 1.0,
+    "I.S": 1.2,
+    "O.D": 1.5,
+    "O.W": 1.1,
+    "S.DC": 0.8
+  },
+  "counterparty_distribution": {
+    "O.D": {
+      "Retail": 0.65,
+      "Small Business": 0.35
+    },
+    "I.S": {
+      "Bank": 0.4,
+      "Broker-Dealer": 0.3,
+      "Other": 0.1
+    },
+    "O.W": {
+      "Bank": 0.5,
+      "Broker-Dealer": 0.3,
+      "Non-Financial Corporate": 0.2
+    },
+    "S.DC": {
+      "Bank": 0.45,
+      "Broker-Dealer": 0.35,
+      "Investment Company or Advisor": 0.2
+    }
+  },
+  "collateral_distribution": {
+    "I.S": {
+      "A-1-Q": 0.4,
+      "G-1-Q": 0.3,
+      "CB-1-Q": 0.2,
+      "S-1-Q": 0.1
+    },
+    "O.S": {
+      "A-1-Q": 0.35,
+      "G-1-Q": 0.35,
+      "CB-1-Q": 0.2,
+      "S-1-Q": 0.1
+    },
+    "S.DC": {
+      "A-1-Q": 0.5,
+      "G-1-Q": 0.3,
+      "CB-1-Q": 0.2
+    }
+  }
+}

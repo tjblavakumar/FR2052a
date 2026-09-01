@@ -1,0 +1,24 @@
+,(8) O.S. PIDs for item 1.d,
+Field,,Value
+Reporting Entity,,FR Y‐15 Firm
+Currency,,*
+Converted,,#
+PID,,O.S.8
+Product,,Matches PID
+Sub‐Product,,"External Cash Transaction, External Non‐Cash
+Transaction, Customer Longs"
+Maturity Amount,,*
+Maturity Bucket,,"Column A: <=30 days
+Column B: 31 to 90 days
+Column C: 91 to 180 days
+Column D: 181 days to 1 yr"
+Maturity Optionality,,#
+Forward Start Amount,,#
+Forward Start Bucket,,#
+Collateral Class,,Level 2B HQLA or Non‐HQLA
+Collateral Value,,#
+Collateral Currency,,#
+Treasury Control,,#
+Internal,,#
+Internal Counterparty,,#
+Business Line,,#

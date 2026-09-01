@@ -1,0 +1,13 @@
+Counterparty,"Financial Sector Entity, Central Bank"
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,< 6 Months
+Maturity Optionality,#
+Collateral Class,#
+Collateral Value,#
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Internal,#
+Internal Counterparty,#
+Loss Absorbency,#
+Business Line,#

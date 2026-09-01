@@ -1,0 +1,23 @@
+,,,,,,
+,Balance Sheet,,Foreign Exchange,,Comments,
+,Reporting Entity text,,Reporting Entity text,,Reporting Entity text,
+,Collection Reference text,,Product text,,Collection text,
+,Product text,,Maturity Amount Currency 1 numeric,,Product text,
+,Product Reference text,,Maturity Amount Currency 2 numeric,,Sub-Product text,
+,Sub-Product Reference text,,Maturity Bucket text,,Comments text,
+,Collateral Class text,,Foreign Exchange Option Direction text,,,
+,Maturity Bucket text,,Forward Start Amount Currency 1 numeric,,,
+,"Effective Maturity Bucket text
+Encumbrance Type text",,"Forward Start Amount Currency 2 numeric
+Forward Start Bucket text",,,
+,Market Value numeric,,Counterparty text,,,
+,Maturity Amount numeric,,G-SIB text,,,
+,"Collateral Value numeric
+Counterparty text
+G-SIB text",,"Settlement text
+Business Line text
+Internal text",,,
+,Risk Weight percent,,Internal Counterparty text,,,
+,Internal text,,,,,
+,Internal Counterparty text,,,,,
+,,,,,,

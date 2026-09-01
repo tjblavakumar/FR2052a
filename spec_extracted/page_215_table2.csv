@@ -1,0 +1,21 @@
+(44) Other liabilities maturing in < 6 months (§.104(e)(5)),
+Field,Value
+Reporting Entity,NSFR Entity
+Collection Reference,#
+PID,S.B.2
+Product,Matches PID
+Sub-Product,#
+Product Reference,#
+Sub-Product Reference,#
+Collateral Class,#
+Maturity Bucket,< 6 Months
+Effective Maturity Bucket,#
+Encumbrance Type,#
+Market Value,#
+Maturity Amount,*
+Collateral Value,#
+Counterparty,Non-Financial Wholesale Entity or NULL
+G-SIB,#
+Risk Weight,#
+Internal,#
+Internal Counterparty,#

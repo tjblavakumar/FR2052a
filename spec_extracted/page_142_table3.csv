@@ -1,0 +1,12 @@
+(71) Secured Funding from Governmental Entities not L1 or L2A (§.32(j)(1)(iii)),
+Field,Value
+Reporting Entity,LCR Firm
+PID,"O.S.1, 2, 3, 5, 6 (FRB and other central banks
+where the sovereign has not established an LCR
+outflow rate), 7 and 11"
+Product,Matches PID
+Sub‐Product,"For O.S.7, cannot be Unsettled (Regular Way) or
+Unsettled (Forward), # otherwise"
+Maturity Amount,*
+Maturity Bucket,<= 30 calendar days
+Maturity Optionality,#

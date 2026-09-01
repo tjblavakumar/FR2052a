@@ -1,0 +1,18 @@
+(12) Insured reciprocal brokered deposits (§.104(c)(2)),
+Field,Value
+Reporting Entity,NSFR Entity
+PID,O.D.13
+Product,Matches PID
+Counterparty,"Retail, Small Business"
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,#
+Maturity Optionality,#
+Collateral Class,#
+Collateral Value,#
+Insured,FDIC
+Trigger,#
+Rehypothecated,#
+Internal,#
+Internal Counterparty,#
+Business Line,#

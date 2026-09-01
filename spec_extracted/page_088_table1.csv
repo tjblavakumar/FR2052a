@@ -1,0 +1,29 @@
+Table PID Product Sub-Product Sub-Product 2
+"Outflows - Secured 7 Customer Shorts External Cash Transactions
+8 Firm Shorts External Non-Cash Transactions
+Firm Longs
+Customer Longs
+Unsettled - Regular Way
+Unsettled - Forward"
+"Outflows - Secured 9 Synthetic Customer Shorts Firm Short
+10 Synthetic Firm Financing Synthetic Customer Long
+Synthetic Firm Sourcing
+Futures
+Other
+Unhedged"
+"Inflows - Secured 9 Synthetic Customer Longs Physical Long Position
+10 Synthetic Firm Sourcing Synthetic Customer Short
+Synthetic Firm Financing
+Futures
+Other
+Unhedged"
+"Supplemental - 1 Gross Derivative Asset Values Rehypothecateable Collateral Unencumbered OTC - Bilateral
+Derivatives & Collateral 2 Gross Derivative Liability Values Rehypothecateable Collateral Encumbered OTC - Centralized (Principal)
+3 Derivative Settlement Payments Delivered Non-Rehypothecateable Collateral OTC - Centralized (Agent)
+4 Derivative Settlement Payments Received Segregated Cash Exchange-traded (Principal)
+5 Initial Margin Posted - House Non-Segregated Cash Exchange-traded (Agent)
+6 Initial Margin Posted - Customer
+7 Initial Margin Received
+8 Variation Margin Posted - House
+9 Variation Margin Posted - Customer
+10 Variation Margin Received"

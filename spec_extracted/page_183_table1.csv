@@ -1,0 +1,20 @@
+Maturity Bucket,"Column A: <=30 days
+Column B: 31 to 90 days
+Column C: 91 to 180 days
+Column D: 181 days to 1 yr"
+Maturity Optionality,#
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Collateral Class,Other
+Collateral Value,#
+Treasury Control,#
+Internal,#
+Internal Counterparty,#
+Risk Weight,#
+Business Line,#
+Settlement,#
+Rehypothecated,#
+Counterparty,"Non‐Financial Corporate, Sovereign, Central
+Bank, GSE, PSE, MDB, Other Supranational, Debt
+Issuing SPE, Other"
+G‐SIB,#

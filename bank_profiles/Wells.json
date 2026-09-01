@@ -1,0 +1,91 @@
+{
+  "bank": "Wells",
+  "description": "A massive diversified retail and commercial bank characterized by a dominant retail deposit base, significant mortgage-backed asset holdings, and substantial wholesale funding via secured repo and derivatives markets.",
+  "table_weights": {
+    "I.A": 0.15,
+    "I.U": 0.05,
+    "I.S": 0.1,
+    "I.O": 0.05,
+    "O.W": 0.1,
+    "O.S": 0.1,
+    "O.D": 0.25,
+    "O.O": 0.05,
+    "S.DC": 0.05,
+    "S.L": 0.02,
+    "S.B": 0.02,
+    "S.I": 0.01,
+    "S.FX": 0.0
+  },
+  "product_weights": {
+    "O.D.1": 0.3,
+    "O.D.2": 0.25,
+    "I.A.1": 0.15,
+    "I.S.1": 0.1,
+    "O.W.1": 0.05,
+    "S.DC.1": 0.05,
+    "O.S.1": 0.1
+  },
+  "amount_scale": {
+    "I.A": 1.0,
+    "I.U": 0.5,
+    "I.S": 1.2,
+    "I.O": 0.3,
+    "O.W": 0.8,
+    "O.S": 1.1,
+    "O.D": 1.5,
+    "O.O": 0.4,
+    "S.DC": 0.9,
+    "S.L": 0.1,
+    "S.B": 1.0,
+    "S.I": 0.1,
+    "S.FX": 0.2
+  },
+  "counterparty_distribution": {
+    "O.D": {
+      "Retail": 0.65,
+      "Small Business": 0.25,
+      "Non-Financial Corporate": 0.1
+    },
+    "I.S": {
+      "Bank": 0.4,
+      "Broker-Dealer": 0.3,
+      "Investment Company or Advisor": 0.2,
+      "Other Supervised Non-Bank Financial Entity": 0.1
+    },
+    "O.W": {
+      "Bank": 0.5,
+      "Broker-Dealer": 0.3,
+      "Financial Market Utility": 0.2
+    },
+    "I.A": {
+      "Retail": 0.4,
+      "Small Business": 0.3,
+      "Non-Financial Corporate": 0.2,
+      "GSE": 0.1
+    },
+    "S.DC": {
+      "Bank": 0.5,
+      "Broker-Dealer": 0.4,
+      "Other": 0.1
+    }
+  },
+  "collateral_distribution": {
+    "I.S": {
+      "A-1-Q": 0.4,
+      "G-2-Q": 0.3,
+      "A-2-Q": 0.2,
+      "CB-1-Q": 0.1
+    },
+    "O.S": {
+      "A-1-Q": 0.35,
+      "G-2-Q": 0.35,
+      "S-1-Q": 0.2,
+      "CB-2-Q": 0.1
+    },
+    "S.DC": {
+      "A-1-Q": 0.5,
+      "G-2-Q": 0.3,
+      "CB-1-Q": 0.2
+    }
+  }
+}

@@ -1,0 +1,10 @@
+(39) Securities financing transactions with financials and central banks maturing in,
+< 6 months (§.104(e)(4)),
+Field,Value
+Reporting Entity,NSFR Entity
+PID,"O.S.1, 2, 3, 6, 7, 11"
+Product,Matches PID
+Sub-Product,Not FRFF
+Counterparty,"Financial Sector Entity, Central Bank"
+G-SIB,#
+Maturity Amount,*

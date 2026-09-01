@@ -1,0 +1,40 @@
+"The following table displays which products require the reporting of a Sub-Product or Sub-Product 2, along with the corresponding set of acceptable values.",
+Table PID Product Sub-Product Sub-Product 2,
+Inflows - Assets 2 Capacity Federal Reserve Bank,
+,Swiss National Bank
+,Bank of England
+,European Central Bank
+,Bank of Japan
+,Reserve Bank of Australia
+,Bank of Canada
+,Other Central Bank
+,Federal Home Loan Bank
+,Other Government Sponsored Entity
+Inflows - Assets 3 Unrestricted Reserve Balances Federal Reserve Bank,
+,4 Restricted Reserve Balances Swiss National Bank
+,Bank of England
+,European Central Bank
+,Bank of Japan
+,Reserve Bank of Australia
+,Bank of Canada
+,Other Central Bank
+,Currency and Coin
+"Inflows - Secured 4 Collateral Swaps Level 1 Pledged
+Level 2a Pledged
+Level 2b Pledged
+Non-HQLA Pledged
+No Collateral Pledged",
+"Outflows - Secured 4 Collateral Swaps Level 1 Received
+Level 2a Received
+Level 2b Received
+Non-HQLA Received
+No Collateral Received",
+"Outflows - Secured 6 Exceptional Central Bank Operations Federal Reserve Bank
+Swiss National Bank
+Bank of England
+European Central Bank
+Bank of Japan
+Reserve Bank of Australia
+Bank of Canada
+Other Central Bank
+Covered Federal Reserve Facility Funding",

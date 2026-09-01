@@ -1,0 +1,17 @@
+(107) Financial and Central Bank Cash Inflow Amount (§.33(d)(1)),
+Field,Value
+Reporting Entity,LCR Firm
+PID,I.A.3
+Product,Matches PID
+Sub‐Product,#
+Market Value,*
+Lendable Value,#
+Maturity Bucket,<= 30 calendar days but not Open
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Collateral Class,A‐0‐Q
+Treasury Control,#
+Accounting Designation,#
+Effective Maturity Bucket,#
+Encumbrance Type,#
+Internal Counterparty,#

@@ -1,0 +1,21 @@
+(42) Firm short positions (§.104(e)(5)),
+Field,Value
+Reporting Entity,NSFR Entity
+PID,O.S.8
+Product,Matches PID
+Sub-Product,Not Unsettled (Forward)
+Counterparty,#
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,< 6 Months
+Maturity Optionality,#
+Collateral Class,#
+Collateral Value,#
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Treasury Control,#
+Internal,#
+Internal Counterparty,#
+Settlement,#
+Rehypothecated,#
+Business Line,#

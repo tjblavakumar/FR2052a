@@ -1,0 +1,19 @@
+(16) Unsecured wholesale non-deposit funding from non-financials maturing in < 1 year,
+(§.104(d)(1)),
+Field,Value
+Reporting Entity,NSFR Entity
+PID,"O.W.9, 10, 17, 18, 19"
+Product,Matches PID
+Counterparty,Non-Financial Wholesale Entity
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,< 1 Year2
+Maturity Optionality,#
+Collateral Class,#
+Collateral Value,#
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Internal,#
+Internal Counterparty,#
+Loss Absorbency,#
+Business Line,#

@@ -1,0 +1,9 @@
+(79) Secured Funding Non-HQLA (§.32(j)(1)(vi)),
+Field,Value
+Reporting Entity,LCR Firm
+PID,"O.S.1, 2, 3, 7 and 11"
+Product,Matches PID
+Sub‐Product,"For O.S.7, cannot be Customer Long, Unsettled
+(Regular Way) or Unsettled (Forward); #otherwise"
+Maturity Amount,*
+Maturity Bucket,<= 30 calendar days

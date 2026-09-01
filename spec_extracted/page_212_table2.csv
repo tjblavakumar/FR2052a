@@ -1,0 +1,19 @@
+(38) Unsecured wholesale deposit funding from financials and central banks maturing in,
+< 6 months (§.104(e)(4)),
+Field,Value
+Reporting Entity,NSFR Entity
+PID,"O.D.5, 6, 8, 10, 11, 13, 14, 15"
+Product,Matches PID
+Counterparty,"Financial Sector Entity, Central Bank"
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,< 6 Months
+Maturity Optionality,#
+Collateral Class,#
+Collateral Value,#
+Insured,#
+Trigger,#
+Rehypothecated,#
+Internal,#
+Internal Counterparty,#
+Business Line,#

@@ -1,0 +1,18 @@
+(104) Retail Cash Inflow Amount (§.33(c)),
+Field,Value
+Reporting Entity,LCR Firm
+PID,I.U.5 and 6
+Product,Matches PID
+Counterparty,Retail or Small Business
+G‐SIB,#
+Maturity Amount,*
+Maturity Bucket,<= 30 calendar days but not Open
+Maturity Optionality,#
+Effective Maturity Bucket,#
+Encumbrance Type,#
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Internal,#
+Internal Counterparty,#
+Risk Weight,#
+Business Line,#

@@ -1,0 +1,31 @@
+(73) Secured Funding L2B (§.32(j)(1)(iv)),
+Field,Value
+Reporting Entity,LCR Firm
+PID,O.D.5 and 6
+Product,Matches PID
+Counterparty,"Non‐Financial Corporate, PSE, Other
+Supranational, Pension Fund, Bank, Broker‐
+Dealer, Investment Company or Advisor,
+Financial Market Utility, Other Supervised Non‐
+Bank Financial Entity, Non‐Regulated Fund, Debt
+Issuing SPE, Other,"
+G‐SIB,#
+Maturity Amount,*
+Maturity Bucket,<= 30 calendar days
+Maturity Optionality,#
+Collateral Class,Level 2B HQLA
+Collateral Value,"To the extent the Collateral Value is less than the
+Maturity Amount, treat the Maturity Amount less
+the Collateral Value amount as unsecured
+wholesale funding under .32(h)"
+Insured,#
+Trigger,#
+Rehypothecated,"Y for Non‐Financial Corporate, PSE, Other
+Supranational, Debt Issuing SPE, Other; # for
+Pension Fund, Bank, Broker‐Dealer, Investment
+Company or Advisor, Financial Market Utility,
+Other Supervised Non‐Bank Financial Entity, Non‐
+Regulated Fund"
+Business Line,#
+Internal,#
+Internal Counterparty,#

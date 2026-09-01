@@ -1,0 +1,21 @@
+,(75) Secured Funding L2B (§.32(j)(1)(iv)),
+Field,,Value
+Reporting Entity,,LCR Firm
+PID,,O.W.1‐7
+Product,,Matches PID
+Counterparty,,#
+G‐SIB,,#
+Maturity Amount,,*
+Maturity Bucket,,<= 30 calendar days
+Maturity Optionality,,#
+Collateral Class,,Level 2B HQLA
+Collateral Value,,"To the extent the Collateral Value is less than the
+Maturity Amount, treat the Maturity Amount less
+the Collateral Value amount as unsecured
+wholesale funding under .32(h)"
+Forward Start Amount,,NULL
+Forward Start Bucket,,NULL
+Internal,,#
+Internal Counterparty,,#
+Loss Absorbency,,#
+Business Line,,#

@@ -1,0 +1,17 @@
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Collateral Class,Level 2B HQLA or Non‐HQLA
+Collateral Value,"To the extent the Collateral Value is less than the
+Maturity Amount, treat the Maturity Amount less
+the Collateral Value amount as unsecured
+wholesale funding under .32(h)"
+Treasury Control,#
+Internal,#
+Internal Counterparty,#
+Business Line,#
+Settlement,#
+Rehypothecated,#
+Counterparty,"Sovereign, Central Bank (FRB and other central
+banks where the sovereign has not established
+its own outflow rate), GSE, or MDB"
+G‐SIB,#

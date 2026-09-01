@@ -1,0 +1,17 @@
+Encumbrance Type,#
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Collateral Class,Non‐HQLA
+Collateral Value,"To the extent the Collateral Value is less than the
+Maturity Amount, treat the Maturity Amount less
+the Collateral Value amount as unsecured
+wholesale lending under .33(d)"
+Unencumbered,#
+Treasury Control,#
+Internal,#
+Internal Counterparty,#
+Risk Weight,#
+Business Line,#
+Settlement,#
+Counterparty,Not Retail or Small Business
+G‐SIB,#

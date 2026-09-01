@@ -1,0 +1,18 @@
+(27) Non-affiliated retail sweep deposits (§.104(d)(8)),
+Field,Value
+Reporting Entity,NSFR Entity
+PID,O.D.11
+Product,Matches PID
+Counterparty,"Retail, Small Business"
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,#
+Maturity Optionality,#
+Collateral Class,#
+Collateral Value,#
+Insured,#
+Trigger,#
+Rehypothecated,#
+Internal,#
+Internal Counterparty,#
+Business Line,#

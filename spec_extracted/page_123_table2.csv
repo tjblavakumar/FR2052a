@@ -1,0 +1,19 @@
+(27) Non-Bank and Non-SPE Financial Sector Entity Credit Facilities (§.32(e)(1)(vi)),
+Field,Value
+Reporting Entity,LCR Firm
+PID,O.O.4
+Product,Matches PID
+Counterparty,"Pension Fund, Broker‐Dealer, Investment
+Company or Advisor, Financial Market Utility,
+Other Supervised Non‐Bank Financial Entity,
+Non‐Regulated Fund"
+G‐SIB,#
+Maturity Amount,*
+Maturity Bucket,<= 30 calendar days
+Forward Start Amount,#
+Forward Start Bucket,#
+Collateral Class,*
+Collateral Value,*
+Internal,#
+Internal Counterparty,#
+Business Line,#

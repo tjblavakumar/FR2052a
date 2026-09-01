@@ -1,0 +1,19 @@
+(49) Unsecured lending to central banks maturing in < 6 months (§.106(a)(1)(iii) & (iv)),
+Field,Value
+Reporting Entity,NSFR Entity
+PID,"I.U.1 – 6, 8"
+Product,Matches PID
+Counterparty,Central Bank
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,< 6 Months
+Maturity Optionality,#
+Effective Maturity Bucket,< 6 Months or NULL
+Encumbrance Type,"Not Derivative VM, Derivative IM and DFC or
+Covered Federal Reserve Facility Funding"
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Internal,#
+Internal Counterparty,#
+Risk Weight,#
+Business Line,#

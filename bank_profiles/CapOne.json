@@ -1,0 +1,58 @@
+{
+  "bank": "CapOne",
+  "description": "A consumer-centric retail powerhouse with a significant credit card and auto loan focus, characterized by massive retail deposit bases and high-volume consumer credit inflows.",
+  "table_weights": {
+    "O.D": 0.45,
+    "I.A": 0.2,
+    "O.W": 0.15,
+    "S.DC": 0.1,
+    "I.S": 0.05,
+    "O.S": 0.05
+  },
+  "product_weights": {
+    "O.D.1": 0.4,
+    "I.A.1": 0.3,
+    "O.W.1": 0.15,
+    "S.DC.1": 0.15
+  },
+  "amount_scale": {
+    "O.D": 1.0,
+    "I.A": 0.8,
+    "O.W": 0.5,
+    "S.DC": 0.2,
+    "I.S": 0.3,
+    "O.S": 0.3
+  },
+  "counterparty_distribution": {
+    "O.D": {
+      "Retail": 0.85,
+      "Small Business": 0.15
+    },
+    "I.A": {
+      "Retail": 0.7,
+      "Small Business": 0.2,
+      "Non-Financial Corporate": 0.1
+    },
+    "O.W": {
+      "Bank": 0.6,
+      "Broker-Dealer": 0.3,
+      "Other": 0.1
+    },
+    "S.DC": {
+      "Bank": 0.8,
+      "Investment Company or Advisor": 0.2
+    }
+  },
+  "collateral_distribution": {
+    "I.S": {
+      "G-2-Q": 0.6,
+      "G-1-Q": 0.3,
+      "CB-1-Q": 0.1
+    },
+    "O.S": {
+      "G-2-Q": 0.5,
+      "G-1-Q": 0.4,
+      "CB-1-Q": 0.1
+    }
+  }
+}

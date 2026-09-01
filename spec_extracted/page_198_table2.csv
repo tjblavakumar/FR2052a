@@ -1,0 +1,18 @@
+"(8) Stable retail deposits, excluding sweeps (§.104(b)(1))",
+Field,Value
+Reporting Entity,NSFR Entity
+PID,"O.D.1, 2"
+Product,Matches PID
+Counterparty,"Retail, Small Business"
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,#
+Maturity Optionality,#
+Collateral Class,#
+Collateral Value,#
+Insured,FDIC
+Trigger,#
+Rehypothecated,#
+Internal,#
+Internal Counterparty,#
+Business Line,#

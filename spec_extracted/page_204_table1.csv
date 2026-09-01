@@ -1,0 +1,20 @@
+(20) Unsecured wholesale non-deposit funding from financials and central banks maturing in ≥ 6,
+"months, but < 1 year (§.104(d)(3))",
+,
+Field,Value
+Reporting Entity,NSFR Entity
+PID,"O.W.9, 10, 17, 18, 19"
+Product,Matches PID
+Counterparty,"Financial Sector Entity, Central Bank"
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,"≥ 6 Months, < 1 Year"
+Maturity Optionality,#
+Collateral Class,#
+Collateral Value,#
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Internal,#
+Internal Counterparty,#
+Loss Absorbency,#
+Business Line,#

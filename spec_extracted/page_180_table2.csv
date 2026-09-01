@@ -1,0 +1,17 @@
+,(3) O.W. PIDs for item 1.a,
+Field,,Value
+Reporting Entity,,FR Y‐15 Firm
+Currency,,*
+Converted,,#
+PID,,"O.W.1‐7, 9‐19"
+Product,,Matches PID
+Counterparty,,#
+G‐SIB,,#
+Maturity Amount,,*
+Maturity Bucket,,"Column A: <=30 days
+Column B: 31 to 90 days
+Column C: 91 to 180 days
+Column D: 181 days to 1 yr"
+Maturity Optionality,,#
+Collateral Class,,Level 1 HQLA
+Collateral Value,,#

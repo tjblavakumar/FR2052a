@@ -1,0 +1,14 @@
+(43) Interest payable to non-financial wholesale entities in < 6 months (§.104(e)(5)),
+Field,Value
+Reporting Entity,NSFR Entity
+PID,O.O.19
+Product,Matches PID
+Counterparty,Non-Financial Wholesale Entity or NULL
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,< 6 Months
+Collateral Class,#
+Collateral Value,#
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Internal,#

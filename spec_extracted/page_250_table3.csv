@@ -1,0 +1,16 @@
+"(113) Variation margin provided, excluding overcollateralized portion (§.107(f)(2))",
+Field,Value
+Reporting Entity,NSFR Entity
+PID,S.DC.8 and 9
+Product,Matches PID
+Sub-Product,#
+Sub-Product2,"Not OTC – Centralized (Agent) or Exchange-traded
+(Agent)"
+Market Value,*
+Collateral Class,#
+Collateral Level,Not Overcollateralized5
+Counterparty,#
+G-SIB,#
+Effective Maturity Bucket,#
+Encumbrance Type,#
+Netting Eligible,#

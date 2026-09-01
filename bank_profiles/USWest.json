@@ -1,0 +1,65 @@
+{
+  "bank": "USWest",
+  "description": "A large-scale regional retail bank with a heavy reliance on stable retail deposits and a moderate wholesale funding component for liquidity management.",
+  "table_weights": {
+    "O.D": 0.55,
+    "I.A": 0.15,
+    "O.W": 0.1,
+    "I.S": 0.05,
+    "O.S": 0.05,
+    "S.DC": 0.05,
+    "I.U": 0.05,
+    "S.B": 0.05
+  },
+  "product_weights": {
+    "O.D.1": 0.4,
+    "O.D.2": 0.25,
+    "I.A.1": 0.1,
+    "O.W.1": 0.1,
+    "O.S.1": 0.05,
+    "S.DC.1": 0.05
+  },
+  "amount_scale": {
+    "O.D": 1000000000.0,
+    "I.A": 500000000.0,
+    "O.W": 100000000.0,
+    "I.S": 50000000.0,
+    "O.S": 50000000.0,
+    "S.DC": 10000000.0
+  },
+  "counterparty_distribution": {
+    "O.D": {
+      "Retail": 0.7,
+      "Small Business": 0.3
+    },
+    "I.A": {
+      "Non-Financial Corporate": 0.5,
+      "Sovereign": 0.3,
+      "GSE": 0.2
+    },
+    "O.W": {
+      "Bank": 0.6,
+      "Broker-Dealer": 0.4
+    },
+    "I.S": {
+      "Bank": 0.8,
+      "Investment Company or Advisor": 0.2
+    },
+    "S.DC": {
+      "Bank": 0.7,
+      "Non-Financial Corporate": 0.3
+    }
+  },
+  "collateral_distribution": {
+    "I.S": {
+      "G-2-Q": 0.6,
+      "A-1-Q": 0.3,
+      "S-1-Q": 0.1
+    },
+    "O.S": {
+      "G-2-Q": 0.5,
+      "A-1-Q": 0.4,
+      "S-1-Q": 0.1
+    }
+  }
+}

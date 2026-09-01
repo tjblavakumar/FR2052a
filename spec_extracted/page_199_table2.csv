@@ -1,0 +1,20 @@
+"(10) Not FDIC insured transactional and non-relationship retail deposits, excluding sweeps and",
+brokered deposits (§.104(c)(1)),
+,
+Field,Value
+Reporting Entity,NSFR Entity
+PID,"O.D.1, 2"
+Product,Matches PID
+Counterparty,"Retail, Small Business"
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,#
+Maturity Optionality,#
+Collateral Class,#
+Collateral Value,#
+Insured,Not FDIC
+Trigger,#
+Rehypothecated,#
+Internal,#
+Internal Counterparty,#
+Business Line,#

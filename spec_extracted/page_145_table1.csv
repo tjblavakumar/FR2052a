@@ -1,0 +1,23 @@
+Collateral Value,"To the extent the Collateral Value is less than the
+Maturity Amount, treat the Maturity Amount less
+the Collateral Value amount as unsecured
+wholesale funding under .32(h)"
+Treasury Control,#
+Internal,#
+Internal Counterparty,#
+Business Line,#
+Settlement,#
+Rehypothecated,"Y for Non‐Financial Corporate, PSE, Other
+Supranational, Debt Issuing SPE, Other; # for
+Pension Fund, Bank, Broker‐Dealer, Investment
+Company or Advisor, Financial Market Utility,
+Other Supervised Non‐Bank Financial Entity, Non‐
+Regulated Fund"
+CID,Matches Counterparty
+Counterparty,"Non‐Financial Corporate, PSE, Other
+Supranational, Pension Fund, Bank, Broker‐
+Dealer, Investment Company or Advisor,
+Financial Market Utility, Other Supervised Non‐
+Bank Financial Entity, Non‐Regulated Fund, Debt
+Issuing SPE, Other"
+G‐SIB,#

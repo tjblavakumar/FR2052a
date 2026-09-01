@@ -1,0 +1,16 @@
+(6) Wholesale interest payable in ≥ 1 year (§.104(a)(2)),
+Field,Value
+Reporting Entity,NSFR Entity
+PID,O.O.19
+Product,Matches PID
+Counterparty,Not Retail or Small Business
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,≥ 1 Year
+Collateral Class,#
+Collateral Value,#
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Internal,#
+Internal Counterparty,#
+Business Line,#

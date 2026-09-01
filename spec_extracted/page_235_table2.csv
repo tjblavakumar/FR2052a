@@ -1,0 +1,18 @@
+(82) Non-HQLA common equity shares (§.106(a)(6)(iii)),
+Field,Value
+Reporting Entity,NSFR Entity
+PID,"I.A.1, 2, 5, 7"
+Product,Matches PID
+Sub-Product,#
+Market Value,*
+Lendable Value,#
+Maturity Bucket,#
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Collateral Class,"E-1, E-2, E-3, E-4"
+Treasury Control,#
+Accounting Designation,#
+Effective Maturity Bucket,< 1 Year or NULL
+Encumbrance Type,"Not Derivative VM, Derivative IM and DFC or
+Covered Federal Reserve Facility Funding"
+Internal Counterparty,#

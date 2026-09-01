@@ -1,0 +1,23 @@
+(98) Foreign Central Banking Borrowing (§.32(k)),
+Field,Value
+Reporting Entity,LCR Firm
+PID,"O.D.4, 5, 6, 7 (only collateralized deposits)
+(foreign central banks where the sovereign has
+established an LCR outflow rate; if the foreign
+central bank has not established an outflow rate,
+then the outflow should be calculated through
+the secured funding tables above, see relevant
+footnotes above)"
+Product,Matches PID
+Counterparty,Central Bank
+G‐SIB,#
+Maturity Amount,*
+Maturity Bucket,<= 30 calendar days
+Maturity Optionality,#
+Collateral Class,*
+Collateral Value,*
+Insured,#
+Trigger,#
+Rehypothecated,#
+Business Line,#
+Internal,#

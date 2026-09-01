@@ -1,0 +1,21 @@
+(29) Other secured funding from retail customers (§.104(d)(9)),
+Field,Value
+Reporting Entity,NSFR Entity
+PID,"O.S.1, 2, 3, 7, 11"
+Product,Matches PID
+Sub-Product,#
+Counterparty,"Retail, Small Business"
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,#
+Maturity Optionality,#
+Collateral Class,#
+Collateral Value,#
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Treasury Control,#
+Internal,#
+Internal Counterparty,#
+Settlement,#
+Rehypothecated,#
+Business Line,#

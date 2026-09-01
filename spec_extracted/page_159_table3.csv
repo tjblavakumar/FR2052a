@@ -1,0 +1,16 @@
+(102) Other Contractual Outflows (§.32(l)),
+Field,Value
+Reporting Entity,LCR Firm
+PID,O.O.22
+Product,Matches PID
+Counterparty,Not Retail or Small Business
+G‐SIB,#
+Maturity Amount,*
+Maturity Bucket,<= 30 calendar days
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Collateral Class,#
+Collateral Value,#
+Internal,#
+Internal Counterparty,#
+Business Line,#

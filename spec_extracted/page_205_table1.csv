@@ -1,0 +1,23 @@
+"(22) Securities financing transactions with financials and central banks maturing in ≥ 6 months,",
+but < 1 year (§.104(d)(4)),
+,
+Field,Value
+Reporting Entity,NSFR Entity
+PID,"O.S.1, 2, 3, 6, 11"
+Product,Matches PID
+Sub-Product,Not FRFF
+Counterparty,"Financial Sector Entity, Central Bank"
+G-SIB,#
+Maturity Amount,*
+Maturity Bucket,"≥ 6 Months, < 1 Year"
+Maturity Optionality,#
+Collateral Class,#
+Collateral Value,#
+Forward Start Amount,NULL
+Forward Start Bucket,NULL
+Treasury Control,#
+Internal,#
+Internal Counterparty,#
+Settlement,#
+Rehypothecated,#
+Business Line,#
