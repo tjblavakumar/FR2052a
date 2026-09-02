@@ -108,6 +108,15 @@ Each rule compares one metric against a threshold with an operator
 or disable rules by editing `rules.json`; no code changes required. A rule that
 references an absent metric is skipped so config can outlive schema changes.
 
+Each rule may also carry three optional string fields — `description` (what the
+check measures), `rationale` (why it matters), and `recommended_action` (what to
+do about it) — which flow through to the `Finding` and are shown in the
+dashboard's finding-detail panel. A top-level `severity_definitions` block gives
+a plain-language meaning for each severity level (used by the UI's severity
+legend, with a built-in fallback). The engine also computes a normalized
+`breach_ratio` automatically for every finding, measuring how far past its
+threshold the value sits; the UI uses it for a breach-magnitude gauge.
+
 ## Trend & anomaly (`trend.py`, `anomaly.py`)
 - **Trend:** per (entity, metric) least-squares slope per day, first/last, total
   and average daily change, latest delta, and direction (up/down/flat).

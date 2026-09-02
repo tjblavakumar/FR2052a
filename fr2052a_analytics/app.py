@@ -17,16 +17,20 @@ from __future__ import annotations
 
 from pathlib import Path
 
+import altair as alt
 import pandas as pd
 import streamlit as st
 
 from fr2052a_analytics import ui_data
 from fr2052a_analytics.cli import AnalyzeError
+from fr2052a_analytics.config import load_severity_definitions
+from fr2052a_analytics.loader import discover_entities
 from fr2052a_analytics.pipeline import run_pipeline
 from fr2052a_analytics.report import DISCLAIMER
 
 DEFAULT_INPUT = "./output"
 DEFAULT_CONFIG = "analytics_config"
+ALL_ENTITIES = "All entities"
 
 
 @st.cache_data(show_spinner=True)
@@ -51,6 +55,10 @@ def main() -> None:
         st.header("Inputs")
         input_dir = st.text_input("Input directory (phase-1 output)", DEFAULT_INPUT)
         config_dir = st.text_input("Config directory", DEFAULT_CONFIG)
+        _entities = discover_entities(Path(input_dir))
+        focus_options = [ALL_ENTITIES] + _entities
+        focus_entity = st.selectbox("Focus entity", focus_options,
+                                    help="Pick one institution to analyze, or All entities for an overview.")
         forecast_days = st.slider("Forecast horizon (days, experimental)", 0, 10, 3)
         run_clicked = st.button("Run analysis", type="primary")
 
@@ -61,6 +69,7 @@ def main() -> None:
     if run_clicked:
         try:
             st.session_state["result"] = _cached_pipeline(input_dir, config_dir, forecast_days)
+            st.session_state["focus_entity"] = focus_entity
         except AnalyzeError as exc:
             st.error(f"Analysis failed: {exc}")
             return
@@ -78,11 +87,46 @@ def main() -> None:
 
     st.subheader("Findings by severity")
     sev_frame = ui_data.severity_summary_frame(result)
-    st.bar_chart(sev_frame, x="severity", y="count", color="severity")
+    _dom, _rng = ui_data.severity_color_scale()
+    sev_chart = (
+        alt.Chart(sev_frame)
+        .mark_bar()
+        .encode(
+            x=alt.X("severity:N", sort=_dom, title="severity"),
+            y=alt.Y("count:Q", title="count"),
+            color=alt.Color("severity:N",
+                            scale=alt.Scale(domain=_dom, range=_rng),
+                            legend=None),
+            tooltip=["severity", "count"],
+        )
+    )
+    st.altair_chart(sev_chart, use_container_width=True)
+
+    try:
+        _defs = load_severity_definitions(Path(config_dir))
+        defs = ui_data.severity_definitions(_defs)
+    except Exception:
+        defs = ui_data.severity_definitions(None)
+    with st.expander("Severity legend"):
+        for sev in ui_data.SEVERITY_ORDER:
+            st.markdown(
+                f"{_severity_badge(sev)} — {defs.get(sev, '')}",
+                unsafe_allow_html=True,
+            )
 
     # --- Entity drill-down ------------------------------------------------
     st.subheader("Entity liquidity profile")
-    entity = st.selectbox("Entity", result.entities)
+    focus = st.session_state.get("focus_entity", ALL_ENTITIES)
+    if focus != ALL_ENTITIES and focus in result.entities:
+        entity = focus
+        st.markdown(
+            "Focus entity: "
+            f"<span style='font-size:2rem;font-weight:800;color:#00008B'>{entity}</span>",
+            unsafe_allow_html=True,
+        )
+        st.caption("Locked to the focus entity chosen in the sidebar. Change it there and re-run.")
+    else:
+        entity = st.selectbox("Entity", result.entities)
     metrics = ui_data.available_metrics(result)
     default_metric = "approx_lcr" if "approx_lcr" in metrics else (metrics[0] if metrics else None)
     metric = st.selectbox("Metric", metrics,
@@ -109,6 +153,56 @@ def main() -> None:
         else:
             st.dataframe(f[["date", "severity", "rule_id", "metric", "value", "message"]],
                          use_container_width=True, hide_index=True)
+
+            st.markdown("**Finding detail**")
+            options = list(range(len(f)))
+
+            def _label(i: int) -> str:
+                row = f.iloc[i]
+                return f"[{row['severity']}] {row['date']} {row['rule_id']}"
+
+            if len(options) == 1:
+                sel = 0
+            else:
+                sel = st.selectbox(
+                    "Select a finding", options, format_func=_label,
+                    key=f"finding_detail_{entity}",
+                )
+            row = f.iloc[sel]
+            st.markdown(
+                f"{row['rule_id']} &nbsp; {_severity_badge(row['severity'])}",
+                unsafe_allow_html=True,
+            )
+            st.write(f"**Description:** {row.get('description', '')}")
+            st.write(f"**Why it matters:** {row.get('rationale', '')}")
+            st.write(f"**Recommended action:** {row.get('recommended_action', '')}")
+            st.caption(
+                f"Rule logic: {row['metric']} {row.get('op', '')} {row['threshold']} "
+                f"(observed value: {row['value']})"
+            )
+
+            g = ui_data.gauge_data(row)
+            gauge_df = pd.DataFrame([{"label": "breach", "percent": g["percent"]}])
+            base = alt.Chart(gauge_df).encode(
+                x=alt.X("percent:Q", scale=alt.Scale(domain=[0, 100]),
+                        title="How far past threshold (capped at 100%)"),
+                y=alt.Y("label:N", title=None),
+            )
+            bar = base.mark_bar(color=g["color"])
+            st.altair_chart(bar, use_container_width=True)
+
+            try:
+                delta = float(row["value"]) - float(row["threshold"])
+                st.metric("Observed", row["value"], delta=delta)
+            except (TypeError, ValueError):
+                st.metric("Observed", row["value"])
+
+            detail_metric = row["metric"]
+            trend_df = ui_data.metric_with_forecast(result, entity, detail_metric)
+            if not trend_df.empty:
+                pivot = trend_df.pivot_table(index="date", columns="series",
+                                             values="value", aggfunc="first")
+                st.line_chart(pivot)
     with right:
         st.subheader(f"Anomalies — {entity}")
         a = ui_data.anomalies_for_entity(result, entity)
@@ -130,6 +224,8 @@ def main() -> None:
                 peers[["entity", "value", "percentile_rank", "peer_median", "peer_q1", "peer_q3"]],
                 use_container_width=True, hide_index=True,
             )
+            if focus != ALL_ENTITIES:
+                st.caption(f"Focus entity '{entity}' is highlighted in its peer group ranking.")
 
     # --- Business-line breakdown -----------------------------------------
     st.subheader(f"Business-line breakdown — {entity} (latest day)")

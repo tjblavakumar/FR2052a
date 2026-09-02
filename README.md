@@ -232,7 +232,9 @@ The engine is config-driven, mirroring the schema-driven generator:
   thresholds, forecast method.
 - `analytics_config/rules.json` — surveillance rules (metric, operator,
   threshold, severity, message). Add, retune, or disable rules here; changes
-  take effect on the next run with no code edits.
+  take effect on the next run with no code edits. Rules can also carry optional
+  `description`, `rationale`, and `recommended_action` text, which is surfaced in
+  the dashboard's finding-detail panel.
 
 ### Dashboard (Streamlit UI)
 

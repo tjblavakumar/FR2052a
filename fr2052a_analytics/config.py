@@ -43,3 +43,13 @@ def load_rules(config_dir: Path) -> list[dict]:
     if not isinstance(rules, list):
         raise ConfigError(f"{RULES_FILE} must contain a 'rules' array.")
     return rules
+
+
+def load_severity_definitions(config_dir: Path) -> dict:
+    """Load the plain-language severity definitions from ``config_dir/rules.json``.
+
+    Returns the top-level ``severity_definitions`` object, or an empty dict if
+    the key is absent.
+    """
+    data = _read_json(Path(config_dir) / RULES_FILE)
+    return data.get("severity_definitions", {})

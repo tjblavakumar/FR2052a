@@ -121,7 +121,9 @@ def test_severity_counts_and_frame():
     assert counts["critical"] == 1
     frame = findings_to_frame(findings)
     assert list(frame.columns) == ["entity", "date", "rule_id", "severity",
-                                    "metric", "value", "threshold", "message"]
+                                    "metric", "value", "threshold", "message",
+                                    "description", "rationale", "recommended_action",
+                                    "breach_ratio", "op"]
     assert "sev 5.0" in frame.iloc[0]["message"]
 
 

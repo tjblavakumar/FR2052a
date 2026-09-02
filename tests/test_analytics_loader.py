@@ -94,3 +94,20 @@ def test_load_generated_dataset(generated_output_dir):
     assert df["ReportingEntity"].ne("").all()
     assert df["Table"].ne("").all()
     assert df["SourceFile"].ne("").all()
+
+
+def test_discover_entities(csv_output_dir):
+    from fr2052a_analytics.loader import discover_entities
+    ents = discover_entities(csv_output_dir)
+    assert ents == ["Alpha", "Beta"]
+
+
+def test_discover_entities_missing_dir(tmp_path):
+    from fr2052a_analytics.loader import discover_entities
+    assert discover_entities(tmp_path / "nope") == []
+
+
+def test_discover_entities_empty_dir(tmp_path):
+    from fr2052a_analytics.loader import discover_entities
+    d = tmp_path / "empty"; d.mkdir()
+    assert discover_entities(d) == []

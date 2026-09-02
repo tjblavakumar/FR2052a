@@ -92,6 +92,24 @@ def discover_files(input_dir: Path, banks: list[str] | None = None) -> list[Path
     return matched
 
 
+def discover_entities(input_dir: Path) -> list[str]:
+    """Return the sorted unique bank names present in ``input_dir`` by scanning
+    filenames only (no file contents read). Returns [] if the directory is
+    missing or contains no recognizable FR2052a files.
+    """
+    p = Path(input_dir)
+    if not p.exists() or not p.is_dir():
+        return []
+    names: set[str] = set()
+    for path in sorted(p.iterdir()):
+        if not path.is_file():
+            continue
+        parsed = parse_filename(path.name)
+        if parsed is not None:
+            names.add(parsed[0])
+    return sorted(names)
+
+
 def _read_one(path: Path) -> pd.DataFrame:
     """Read a single CSV or JSON file into a DataFrame of row records."""
     ext = path.suffix.lower()

@@ -1,5 +1,13 @@
 {
-  "_comment": "Declarative liquidity surveillance rules evaluated per (entity, date) against the metrics frame from fr2052a_analytics.metrics.compute_metrics. Edit thresholds/severity/messages here with no code changes. Each rule: id, metric (column), op (lt|le|gt|ge|eq|ne|between|outside), threshold (number, or [low,high] for between/outside), severity (info|low|medium|high|critical), message (template with {metric},{value},{threshold},{entity},{date}), enabled (optional, default true).",
+  "_comment": "Declarative liquidity surveillance rules evaluated per (entity, date) against the metrics frame from fr2052a_analytics.metrics.compute_metrics. Edit thresholds/severity/messages here with no code changes. Each rule: id, metric (column), op (lt|le|gt|ge|eq|ne|between|outside), threshold (number, or [low,high] for between/outside), severity (info|low|medium|high|critical), message (template with {metric},{value},{threshold},{entity},{date}), enabled (optional, default true). Rules may also carry optional metadata fields used by the dashboard detail panel: description (what the check measures), rationale (why it matters), and recommended_action (what to do). The top-level severity_definitions block gives plain-language meaning for each severity level; breach_ratio is computed automatically by the engine.",
+
+  "severity_definitions": {
+    "critical": "Imminent liquidity threat: a core buffer or coverage measure has failed by a wide margin and warrants immediate escalation.",
+    "high": "Serious concern: a regulatory or structural threshold is breached; investigate promptly and monitor daily.",
+    "medium": "Elevated risk: a funding-shape or concentration indicator is outside its comfort band; review and track the trend.",
+    "low": "Watch item: a soft threshold or cross-check flag; note it and confirm it does not worsen.",
+    "info": "Informational: surfaced for awareness, no action implied."
+  },
 
   "rules": [
     {
@@ -9,6 +17,9 @@
       "threshold": 100.0,
       "severity": "high",
       "message": "Approx. LCR {value:.1f}% is below the 100% regulatory minimum (approximation on synthetic data).",
+      "description": "Checks whether the approximate Liquidity Coverage Ratio (HQLA stock divided by stressed 30-day net cash outflows) is at least the 100% regulatory floor.",
+      "rationale": "The LCR is the primary short-term resilience measure under Regulation WW. A ratio below 100% means the modeled high-quality liquid asset buffer would not fully cover 30 days of stressed outflows, indicating the firm could face a funding gap in a stress scenario.",
+      "recommended_action": "Confirm the HQLA composition and outflow assumptions, identify the largest outflow drivers, and assess whether the buffer can be rebuilt through asset sales, reduced short-term funding, or deposit growth. Escalate if the shortfall persists across days.",
       "enabled": true
     },
     {
@@ -18,6 +29,9 @@
       "threshold": 10.0,
       "severity": "critical",
       "message": "Approx. LCR {value:.1f}% indicates severe HQLA shortfall relative to stressed net outflows.",
+      "description": "Flags an approximate LCR far below the regulatory floor (under 10%), signalling that the liquid buffer is a small fraction of stressed net outflows.",
+      "rationale": "A ratio this low means the firm holds almost no liquid buffer against its modeled stressed outflows. In a real stress event this would translate into an immediate inability to meet obligations without emergency funding or fire sales.",
+      "recommended_action": "Treat as an urgent liquidity event: validate the data, convene liquidity risk management, and evaluate contingency funding sources immediately. Escalate to senior supervisors.",
       "enabled": true
     },
     {
@@ -27,6 +41,9 @@
       "threshold": 0.5,
       "severity": "medium",
       "message": "Short-term wholesale funding is {value:.0%} of total wholesale funding, indicating rollover risk.",
+      "description": "Measures the share of wholesale funding that matures within 30 days relative to total wholesale funding.",
+      "rationale": "Heavy reliance on short-term wholesale funding creates rollover risk: this funding can evaporate quickly in a stress event, and it is typically the most confidence-sensitive part of the funding base. Concentration here was a hallmark of past liquidity failures.",
+      "recommended_action": "Review the maturity ladder of wholesale liabilities, term out a portion of the short-dated funding, and confirm contingency plans assume this funding does not roll.",
       "enabled": true
     },
     {
@@ -36,6 +53,9 @@
       "threshold": 0.2,
       "severity": "medium",
       "message": "Insured deposits are only {value:.0%} of total deposits; funding base is flight-prone.",
+      "description": "Checks whether insured deposits make up at least a fifth of the total deposit base.",
+      "rationale": "Uninsured deposits are far more likely to leave quickly during stress, as depositors above the insurance limit have a strong incentive to move funds at the first sign of trouble. A low insured share means the deposit base is comparatively flight-prone.",
+      "recommended_action": "Analyze the concentration and stickiness of uninsured depositors, stress the deposit runoff assumptions, and consider strategies to grow insured or operational balances.",
       "enabled": true
     },
     {
@@ -45,6 +65,9 @@
       "threshold": 0.6,
       "severity": "medium",
       "message": "{value:.0%} of secured funding matures within 30 days; concentrated rollover need.",
+      "description": "Measures the share of secured funding (e.g. repo, securities lending) that matures within 30 days.",
+      "rationale": "A large near-term secured funding maturity wall concentrates rollover risk. Even secured funding can become harder or costlier to roll when collateral values fall or counterparties pull back, so a high share heightens sensitivity to market conditions.",
+      "recommended_action": "Examine the secured maturity profile and collateral quality, diversify counterparties and tenors, and confirm the firm can absorb higher haircuts or a partial failure to roll.",
       "enabled": true
     },
     {
@@ -54,6 +77,9 @@
       "threshold": 0.5,
       "severity": "medium",
       "message": "{value:.0%} of subsidiary liquidity/funding cannot be transferred across legal entities.",
+      "description": "Measures the share of subsidiary liquidity and funding that cannot be moved to the parent or other entities, versus the amount available for transfer.",
+      "rationale": "Liquidity that is trapped in a subsidiary by regulatory, contractual, or operational constraints cannot help the wider group in a stress event. A high trapped share means consolidated liquidity overstates what is actually available where it may be needed, a key concern in the FR 2052a's focus on intercompany flows.",
+      "recommended_action": "Map the transfer restrictions by entity, quantify usable versus trapped liquidity, and factor the constraints into group-level contingency funding planning.",
       "enabled": true
     },
     {
@@ -63,6 +89,9 @@
       "threshold": 1.0,
       "severity": "high",
       "message": "Collateral required on downgrade ({value:.2f}x HQLA) exceeds available HQLA.",
+      "description": "Compares the additional collateral the firm would have to post following a credit-rating downgrade against its available HQLA buffer.",
+      "rationale": "Rating-triggered collateral calls are a contingent outflow that can crystallize suddenly. When the potential collateral demand exceeds the HQLA buffer, a downgrade alone could exhaust the firm's liquid resources, turning a credit event into a liquidity event.",
+      "recommended_action": "Identify the contracts driving downgrade triggers, size the exposure by notch, and pre-position collateral or reduce trigger-sensitive positions so a downgrade does not overwhelm the buffer.",
       "enabled": true
     },
     {
@@ -72,6 +101,9 @@
       "threshold": [-25.0, 25.0],
       "severity": "low",
       "message": "Computed LCR diverges from firm-reported by {value:.1f} pts (cross-check; not meaningful on synthetic S.L.6).",
+      "description": "Cross-checks the engine's computed approximate LCR against the firm-reported LCR (product S.L.6), flagging divergences beyond +/-25 points.",
+      "rationale": "A large gap between the independently computed ratio and the firm-reported value can indicate data-quality issues, differing assumptions, or reporting errors that merit review. On synthetic data the reported value is a random magnitude, so this flag demonstrates the cross-check mechanism rather than a real discrepancy.",
+      "recommended_action": "On real data, reconcile the computed and reported figures: check input completeness, confirm the runoff/HQLA assumptions, and follow up with the reporting team on any unexplained gap.",
       "enabled": true
     }
   ]

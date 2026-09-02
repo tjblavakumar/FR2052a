@@ -26,6 +26,30 @@ SEVERITY_COLORS = {
 }
 
 
+def severity_color_scale(order: list[str] | None = None) -> tuple[list[str], list[str]]:
+    """Return (domain, range) for an Altair color scale keyed to SEVERITY_COLORS.
+
+    ``domain`` is the severity labels in ``order`` (defaults to SEVERITY_ORDER);
+    ``range`` is the matching hex colors. Single source of truth so the severity
+    bar chart and the legend always use identical colors.
+    """
+    labels = order or SEVERITY_ORDER
+    domain = [s for s in labels]
+    range_ = [SEVERITY_COLORS.get(s, "#999999") for s in labels]
+    return domain, range_
+
+
+# Default plain-language severity definitions used when config does not supply
+# a ``severity_definitions`` block (mirrors analytics_config/rules.json).
+SEVERITY_DEFINITIONS_FALLBACK = {
+    "critical": "Imminent liquidity threat: a core buffer or coverage measure has failed by a wide margin and warrants immediate escalation.",
+    "high": "Serious concern: a regulatory or structural threshold is breached; investigate promptly and monitor daily.",
+    "medium": "Elevated risk: a funding-shape or concentration indicator is outside its comfort band; review and track the trend.",
+    "low": "Watch item: a soft threshold or cross-check flag; note it and confirm it does not worsen.",
+    "info": "Informational: surfaced for awareness, no action implied.",
+}
+
+
 def metric_timeseries(metrics: pd.DataFrame, entity: str, metric: str) -> pd.DataFrame:
     """Return a two-column (ReportDate, value) frame for one entity/metric.
 
@@ -111,6 +135,53 @@ def severity_summary_frame(result: AnalysisResult) -> pd.DataFrame:
         {"severity": SEVERITY_ORDER,
          "count": [counts.get(s, 0) for s in SEVERITY_ORDER]}
     )
+
+
+def finding_detail(result: AnalysisResult, index: int) -> dict:
+    """Return the ``to_dict()`` of one finding by position, or ``{}`` if out of range."""
+    findings = result.findings
+    if index < 0 or index >= len(findings):
+        return {}
+    return findings[index].to_dict()
+
+
+def _get(obj, key, default=None):
+    """Read ``key`` from a Finding-like object (attribute) or a dict."""
+    if isinstance(obj, dict):
+        return obj.get(key, default)
+    return getattr(obj, key, default)
+
+
+def gauge_data(finding) -> dict:
+    """Shape a finding (object or dict) into gauge-ready fields for the UI.
+
+    ``percent`` is ``min(breach_ratio, 1.0) * 100`` clamped to [0, 100], suitable
+    for a 0-100 breach-magnitude display.
+    """
+    severity = _get(finding, "severity", "info")
+    try:
+        breach_ratio = float(_get(finding, "breach_ratio", 0.0) or 0.0)
+    except (TypeError, ValueError):
+        breach_ratio = 0.0
+    try:
+        value = float(_get(finding, "value", 0.0) or 0.0)
+    except (TypeError, ValueError):
+        value = 0.0
+    percent = min(max(breach_ratio, 0.0), 1.0) * 100.0
+    percent = min(max(percent, 0.0), 100.0)
+    return {
+        "value": value,
+        "threshold": _get(finding, "threshold"),
+        "breach_ratio": breach_ratio,
+        "severity": severity,
+        "color": SEVERITY_COLORS.get(severity, "#999999"),
+        "percent": percent,
+    }
+
+
+def severity_definitions(defs: dict | None = None) -> dict:
+    """Return ``defs`` if it is truthy, otherwise the built-in fallback definitions."""
+    return defs if defs else SEVERITY_DEFINITIONS_FALLBACK
 
 
 def available_metrics(result: AnalysisResult) -> list[str]:

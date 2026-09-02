@@ -46,9 +46,43 @@ class Finding:
     value: float
     threshold: object
     message: str
+    description: str = ""
+    rationale: str = ""
+    recommended_action: str = ""
+    breach_ratio: float = 0.0
+    op: str = ""
 
     def to_dict(self) -> dict:
         return asdict(self)
+
+
+def compute_breach_ratio(op: str, value: float, threshold) -> float:
+    """Return a non-negative, normalized magnitude of how far past the threshold ``value`` is.
+
+    For scalar ops the result is the fractional distance past the threshold line
+    (``abs(value - t) / abs(t)``, or ``abs(value - t)`` when ``t == 0``). For
+    ``outside`` it measures how far beyond the nearer bound the value sits; a
+    ``between`` breach (being inside the band) has magnitude 0. Any error yields
+    ``0.0`` so metadata never breaks evaluation.
+    """
+    try:
+        if op in _SCALAR_OPS:
+            t = float(threshold)
+            if t != 0:
+                return abs(value - t) / abs(t)
+            return abs(value - t)
+        if op == "outside":
+            low, high = float(threshold[0]), float(threshold[1])
+            if value < low:
+                return (abs(low - value) / abs(low)) if low != 0 else abs(low - value)
+            if value > high:
+                return (abs(value - high) / abs(high)) if high != 0 else abs(value - high)
+            return 0.0
+        if op == "between":
+            return 0.0
+    except (TypeError, ValueError, IndexError, ZeroDivisionError):
+        return 0.0
+    return 0.0
 
 
 def _validate_rule(rule: dict) -> None:
@@ -136,6 +170,11 @@ def evaluate_rules(metrics: pd.DataFrame, rules: list[dict]) -> list[Finding]:
                     value=float(value),
                     threshold=threshold,
                     message=_format_message(rule, entity, date, float(value)),
+                    description=rule.get("description", ""),
+                    rationale=rule.get("rationale", ""),
+                    recommended_action=rule.get("recommended_action", ""),
+                    op=op,
+                    breach_ratio=compute_breach_ratio(op, float(value), threshold),
                 ))
 
     findings.sort(key=lambda f: (-_SEVERITY_ORDER.get(f.severity, 0), f.entity, f.date, f.rule_id))
@@ -144,10 +183,11 @@ def evaluate_rules(metrics: pd.DataFrame, rules: list[dict]) -> list[Finding]:
 
 def findings_to_frame(findings: list[Finding]) -> pd.DataFrame:
     """Return findings as a DataFrame (empty with correct columns if none)."""
-    cols = ["entity", "date", "rule_id", "severity", "metric", "value", "threshold", "message"]
+    cols = ["entity", "date", "rule_id", "severity", "metric", "value", "threshold", "message",
+            "description", "rationale", "recommended_action", "breach_ratio", "op"]
     if not findings:
         return pd.DataFrame(columns=cols)
-    return pd.DataFrame([f.to_dict() for f in findings])[cols]
+    return pd.DataFrame([f.to_dict() for f in findings]).reindex(columns=cols)
 
 
 def severity_counts(findings: list[Finding]) -> dict[str, int]:

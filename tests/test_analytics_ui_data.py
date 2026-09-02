@@ -81,3 +81,16 @@ def test_app_module_imports():
     """If streamlit is installed, the app module should import and expose main()."""
     from fr2052a_analytics import app
     assert callable(app.main)
+
+
+def test_severity_color_scale_matches_colors():
+    from fr2052a_analytics import ui_data
+    domain, range_ = ui_data.severity_color_scale()
+    assert domain == ui_data.SEVERITY_ORDER
+    assert range_ == [ui_data.SEVERITY_COLORS[s] for s in ui_data.SEVERITY_ORDER]
+    # critical must be the dark red, not a default blue
+    assert dict(zip(domain, range_))["critical"] == "#8B0000"
+    # custom order is honored
+    d2, r2 = ui_data.severity_color_scale(["high", "low"])
+    assert d2 == ["high", "low"]
+    assert r2 == [ui_data.SEVERITY_COLORS["high"], ui_data.SEVERITY_COLORS["low"]]
