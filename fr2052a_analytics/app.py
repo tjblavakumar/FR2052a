@@ -154,55 +154,92 @@ def main() -> None:
             st.dataframe(f[["date", "severity", "rule_id", "metric", "value", "message"]],
                          use_container_width=True, hide_index=True)
 
-            st.markdown("**Finding detail**")
-            options = list(range(len(f)))
-
-            def _label(i: int) -> str:
-                row = f.iloc[i]
-                return f"[{row['severity']}] {row['date']} {row['rule_id']}"
-
-            if len(options) == 1:
-                sel = 0
+            st.markdown("**Finding detail (grouped by rule)**")
+            groups = ui_data.findings_grouped_by_rule(result, entity)
+            if not groups:
+                st.write("No findings to detail.")
             else:
-                sel = st.selectbox(
-                    "Select a finding", options, format_func=_label,
-                    key=f"finding_detail_{entity}",
-                )
-            row = f.iloc[sel]
-            st.markdown(
-                f"{row['rule_id']} &nbsp; {_severity_badge(row['severity'])}",
-                unsafe_allow_html=True,
-            )
-            st.write(f"**Description:** {row.get('description', '')}")
-            st.write(f"**Why it matters:** {row.get('rationale', '')}")
-            st.write(f"**Recommended action:** {row.get('recommended_action', '')}")
-            st.caption(
-                f"Rule logic: {row['metric']} {row.get('op', '')} {row['threshold']} "
-                f"(observed value: {row['value']})"
-            )
+                for g in groups:
+                    header = f"{g['rule_id']} — {g['count']} day(s), {g['first_date']} to {g['last_date']}"
+                    with st.expander(header, expanded=(groups.index(g) == 0)):
+                        st.markdown(
+                            f"{g['rule_id']} &nbsp; {_severity_badge(g['severity'])}",
+                            unsafe_allow_html=True,
+                        )
+                        st.write(f"**Description:** {g.get('description','')}")
+                        st.write(f"**Why it matters:** {g.get('rationale','')}")
+                        st.write(f"**Recommended action:** {g.get('recommended_action','')}")
+                        st.caption(
+                            f"Rule logic: {g['metric']} {g.get('op','')} {g['threshold']}  |  "
+                            f"worst {g['worst_value']:.2f} on {g['worst_date']}  |  "
+                            f"latest {g['latest_value']:.2f} on {g['latest_date']}"
+                        )
 
-            g = ui_data.gauge_data(row)
-            gauge_df = pd.DataFrame([{"label": "breach", "percent": g["percent"]}])
-            base = alt.Chart(gauge_df).encode(
-                x=alt.X("percent:Q", scale=alt.Scale(domain=[0, 100]),
-                        title="How far past threshold (capped at 100%)"),
-                y=alt.Y("label:N", title=None),
-            )
-            bar = base.mark_bar(color=g["color"])
-            st.altair_chart(bar, use_container_width=True)
+                        # Per-day breach table
+                        bt = ui_data.rule_breach_table(result, entity, g['rule_id'])
+                        st.markdown("_Breach days_")
+                        st.dataframe(bt, use_container_width=True, hide_index=True)
 
-            try:
-                delta = float(row["value"]) - float(row["threshold"])
-                st.metric("Observed", row["value"], delta=delta)
-            except (TypeError, ValueError):
-                st.metric("Observed", row["value"])
+                        # Day selector tied to this rule
+                        day_opts = bt["date"].tolist()
+                        sel_day = st.selectbox("Highlight day", day_opts,
+                                               key=f"day_{entity}_{g['rule_id']}") if day_opts else None
 
-            detail_metric = row["metric"]
-            trend_df = ui_data.metric_with_forecast(result, entity, detail_metric)
-            if not trend_df.empty:
-                pivot = trend_df.pivot_table(index="date", columns="series",
-                                             values="value", aggfunc="first")
-                st.line_chart(pivot)
+                        # Threshold-aware trend chart with breach + selected markers
+                        metric_name = g['metric']
+                        cdata = ui_data.breach_chart_data(result, entity, metric_name,
+                                                          breach_dates=g['dates'], selected_date=sel_day)
+                        if not cdata.empty:
+                            thr = g['threshold']
+                            line = alt.Chart(cdata).mark_line(color="#4C78A8").encode(
+                                x=alt.X("date:T", title="date"),
+                                y=alt.Y("value:Q", title=metric_name),
+                            )
+                            layers = [line]
+                            # threshold reference line(s): scalar -> one rule; list -> two
+                            if isinstance(thr, (list, tuple)):
+                                for tv in thr:
+                                    layers.append(alt.Chart(pd.DataFrame({"y":[float(tv)]}))
+                                                  .mark_rule(color="#888888", strokeDash=[4,4])
+                                                  .encode(y="y:Q"))
+                            else:
+                                layers.append(alt.Chart(pd.DataFrame({"y":[float(thr)]}))
+                                              .mark_rule(color="#888888", strokeDash=[4,4])
+                                              .encode(y="y:Q"))
+                            # breach-day points (red)
+                            breach_pts = cdata[cdata["status"] == "breach"]
+                            if not breach_pts.empty:
+                                layers.append(alt.Chart(breach_pts).mark_point(color="#D62728", size=70, filled=True)
+                                              .encode(x="date:T", y="value:Q",
+                                                      tooltip=["date:T","value:Q"]))
+                            # selected day (large hollow marker)
+                            sel_pts = cdata[cdata["selected"]]
+                            if not sel_pts.empty:
+                                layers.append(alt.Chart(sel_pts).mark_point(color="#000000", size=200, shape="diamond")
+                                              .encode(x="date:T", y="value:Q"))
+                            st.altair_chart(alt.layer(*layers).resolve_scale(y="shared"),
+                                            use_container_width=True)
+                            st.caption("Dashed line = rule threshold. Red points = breach days. Diamond = selected day.")
+
+                        # Gauge + observed metric for the SELECTED day
+                        if sel_day is not None:
+                            srow = bt[bt["date"] == sel_day].iloc[0]
+                            # find the matching finding row for gauge (value/threshold/severity/breach_ratio)
+                            frow = ui_data.findings_for_entity(result, entity)
+                            frow = frow[(frow["rule_id"] == g['rule_id']) & (frow["date"] == sel_day)]
+                            if not frow.empty:
+                                gd = ui_data.gauge_data(frow.iloc[0])
+                                gauge_df = pd.DataFrame([{"label":"breach","percent":gd["percent"]}])
+                                gbar = alt.Chart(gauge_df).mark_bar(color=gd["color"]).encode(
+                                    x=alt.X("percent:Q", scale=alt.Scale(domain=[0,100]),
+                                            title="How far past threshold (capped at 100%)"),
+                                    y=alt.Y("label:N", title=None))
+                                st.altair_chart(gbar, use_container_width=True)
+                                try:
+                                    delta = float(gd["value"]) - float(g['threshold']) if not isinstance(g['threshold'],(list,tuple)) else None
+                                    st.metric(f"Observed on {sel_day}", gd["value"], delta=delta)
+                                except (TypeError, ValueError):
+                                    st.metric(f"Observed on {sel_day}", gd["value"])
     with right:
         st.subheader(f"Anomalies — {entity}")
         a = ui_data.anomalies_for_entity(result, entity)

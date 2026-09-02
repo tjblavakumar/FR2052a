@@ -194,3 +194,101 @@ def available_metrics(result: AnalysisResult) -> list[str]:
         if pd.api.types.is_numeric_dtype(result.metrics[c]):
             cols.append(c)
     return cols
+
+
+def findings_grouped_by_rule(result: AnalysisResult, entity: str) -> list[dict]:
+    """One summary dict per rule that fired for the entity, ordered by severity
+    (critical first via SEVERITY_ORDER) then rule_id.
+
+    Each summary contains rule metadata plus a breach-pattern summary:
+    count, first_date, last_date, worst_value/worst_date (highest breach_ratio,
+    ties broken by earliest date), latest_value/latest_date (max date), and the
+    sorted list of breach dates. Returns ``[]`` when the entity has no findings.
+    """
+    frame = findings_for_entity(result, entity)
+    if frame.empty:
+        return []
+
+    order = {s: i for i, s in enumerate(SEVERITY_ORDER)}
+    groups: list[dict] = []
+    for rule_id, grp in frame.groupby("rule_id", sort=False):
+        # Severity: use the most severe present to be safe.
+        severity = min(
+            grp["severity"].tolist(),
+            key=lambda s: order.get(s, len(order)),
+        )
+
+        def _first_non_empty(col: str) -> str:
+            for val in grp[col].tolist():
+                if val not in (None, "") and not pd.isna(val):
+                    return val
+            return ""
+
+        # Worst = highest breach_ratio; tie -> earliest date.
+        worst = grp.sort_values(["breach_ratio", "date"], ascending=[False, True]).iloc[0]
+        # Latest = max date.
+        latest = grp.sort_values("date").iloc[-1]
+        dates = sorted(grp["date"].tolist())
+
+        groups.append({
+            "rule_id": rule_id,
+            "severity": severity,
+            "metric": grp["metric"].iloc[0],
+            "threshold": grp["threshold"].iloc[0],
+            "op": grp["op"].iloc[0],
+            "description": _first_non_empty("description"),
+            "rationale": _first_non_empty("rationale"),
+            "recommended_action": _first_non_empty("recommended_action"),
+            "count": int(len(grp)),
+            "first_date": min(dates),
+            "last_date": max(dates),
+            "worst_value": float(worst["value"]),
+            "worst_date": worst["date"],
+            "latest_value": float(latest["value"]),
+            "latest_date": latest["date"],
+            "dates": dates,
+        })
+
+    groups.sort(key=lambda g: (order.get(g["severity"], len(order)), g["rule_id"]))
+    return groups
+
+
+def rule_breach_table(result: AnalysisResult, entity: str, rule_id: str) -> pd.DataFrame:
+    """Per-day breach rows for one rule/entity: columns [date, value, breach_pct]
+    sorted by date. ``breach_pct = min(breach_ratio, 1) * 100`` rounded to 1
+    decimal. Empty frame with those columns if none.
+    """
+    cols = ["date", "value", "breach_pct"]
+    frame = findings_for_entity(result, entity)
+    if frame.empty:
+        return pd.DataFrame(columns=cols)
+    sub = frame[frame["rule_id"] == rule_id].copy()
+    if sub.empty:
+        return pd.DataFrame(columns=cols)
+    sub["breach_pct"] = sub["breach_ratio"].apply(
+        lambda r: round(min(float(r), 1.0) * 100.0, 1)
+    )
+    out = sub[["date", "value", "breach_pct"]].sort_values("date")
+    return out.reset_index(drop=True)
+
+
+def breach_chart_data(result: AnalysisResult, entity: str, metric: str,
+                      breach_dates, selected_date: str | None = None) -> pd.DataFrame:
+    """Return the entity's metric actuals as columns [date, value, status] where
+    status is 'breach' if date in ``breach_dates`` else 'ok'; plus a boolean
+    'selected' column true only for ``selected_date``.
+
+    Uses ``metric_with_forecast`` actuals only (series=='actual'). Empty frame
+    with columns [date, value, status, selected] if no data.
+    """
+    cols = ["date", "value", "status", "selected"]
+    df = metric_with_forecast(result, entity, metric)
+    if df.empty:
+        return pd.DataFrame(columns=cols)
+    df = df[df["series"] == "actual"].drop(columns=["series"]).copy()
+    if df.empty:
+        return pd.DataFrame(columns=cols)
+    breach_set = set(breach_dates or [])
+    df["status"] = df["date"].apply(lambda d: "breach" if d in breach_set else "ok")
+    df["selected"] = df["date"].apply(lambda d: selected_date is not None and d == selected_date)
+    return df[cols].reset_index(drop=True)
