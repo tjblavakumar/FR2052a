@@ -242,16 +242,17 @@ Install the optional UI extra and launch:
 
 ```bash
 python -m pip install ".[ui]"     # or: pip install streamlit altair
-streamlit run fr2052a_analytics/app.py
+streamlit run fr2052a_analytics/Dashboard.py
 ```
 
 If you use a virtual environment, install the package into it first
 (`pip install -e ".[ui]"`) and launch with that environment's Streamlit
-(`.\venv\Scripts\streamlit.exe run fr2052a_analytics\app.py` on Windows) so the
-`fr2052a_analytics` package resolves.
+(`.\venv\Scripts\streamlit.exe run fr2052a_analytics\Dashboard.py` on Windows) so
+the `fr2052a_analytics` package resolves.
 
 The core engine stays `pandas`/`numpy`-only; Streamlit and Altair are required
-only for the dashboard.
+only for the dashboard. The app is multi-page: the sidebar navigation shows
+**Dashboard** (this page) and **Admin**.
 
 **Workflow.** In the sidebar, set the input directory, optionally pick a
 **Focus entity** (a specific institution to analyze, or *All entities* for an
@@ -282,6 +283,31 @@ comparison still benchmarks it against the full group.
 The description/rationale/recommended-action text and the severity definitions
 are all config-driven (`analytics_config/rules.json`), so analysts can edit them
 without code changes.
+
+### Admin console
+
+The dashboard is a multi-page app. Launch it as usual
+(`streamlit run fr2052a_analytics/Dashboard.py`) and open the **Admin** page from
+the sidebar page navigation. It has three tabs:
+
+- **Generate data** — pick banks, a start date, number of days, format, and an
+  optional seed, then generate mock files straight into the output folder. By
+  default new files are appended; a guarded "clear existing output first" option
+  (requires a second confirmation) removes existing `FR2052a_*.csv/.json` files
+  before generating.
+- **Analytics config** — edit `rules.json` (per-rule threshold, severity, and
+  enabled flag) and `factors.json` (HQLA haircuts, inflow cap, anomaly
+  thresholds) with structured widgets, plus a raw-JSON editor for advanced
+  changes.
+- **Bank profiles** — edit a profile's description and weight tables; unknown
+  products/counterparties/collateral classes are dropped on save with a warning
+  (the same schema validation the generator uses).
+
+Every save **validates before writing**, backs up the previous file to a
+timestamped `.bak` beside the original, writes atomically, and clears the
+dashboard's cache so the main page reflects the change on its next run. The
+Admin console is a **local tool with no authentication** — intended for the
+single-user demo/analysis workflow.
 
 ## Tests
 

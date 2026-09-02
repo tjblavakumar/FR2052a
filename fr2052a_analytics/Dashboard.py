@@ -1,7 +1,7 @@
 """Streamlit dashboard for the FR 2052a liquidity surveillance engine.
 
 Run with:
-    streamlit run fr2052a_analytics/app.py
+    streamlit run fr2052a_analytics/Dashboard.py
 
 The app runs the analytics pipeline on an input directory of phase-1 output
 files and presents: a severity overview, per-entity metric time series (with an

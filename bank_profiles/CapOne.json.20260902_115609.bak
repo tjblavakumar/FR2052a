@@ -2,7 +2,7 @@
   "bank": "CapOne",
   "description": "A consumer-centric retail powerhouse with a significant credit card and auto loan focus, characterized by massive retail deposit bases and high-volume consumer credit inflows.",
   "table_weights": {
-    "O.D": 0.47,
+    "O.D": 0.45,
     "I.A": 0.2,
     "O.W": 0.15,
     "S.DC": 0.1,

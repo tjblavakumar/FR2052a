@@ -78,9 +78,9 @@ def test_severity_summary_frame(result):
 @pytest.mark.skipif(importlib.util.find_spec("streamlit") is None,
                     reason="streamlit not installed (optional [ui] dependency)")
 def test_app_module_imports():
-    """If streamlit is installed, the app module should import and expose main()."""
-    from fr2052a_analytics import app
-    assert callable(app.main)
+    """If streamlit is installed, the dashboard module should import and expose main()."""
+    from fr2052a_analytics import Dashboard
+    assert callable(Dashboard.main)
 
 
 def test_severity_color_scale_matches_colors():

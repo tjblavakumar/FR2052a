@@ -2,8 +2,8 @@
 
 These helpers shape an :class:`~fr2052a_analytics.pipeline.AnalysisResult` (and
 its frames) into the small tables the dashboard renders. They contain NO
-Streamlit imports so they are unit-testable without launching a UI; ``app.py``
-imports and calls them.
+Streamlit imports so they are unit-testable without launching a UI;
+``Dashboard.py`` imports and calls them.
 """
 from __future__ import annotations
 
