@@ -245,11 +245,43 @@ python -m pip install ".[ui]"     # or: pip install streamlit altair
 streamlit run fr2052a_analytics/app.py
 ```
 
-Set the input directory in the sidebar, click **Run analysis**, then explore:
-severity overview, per-entity metric time series with an optional experimental
-forecast overlay, rule findings, statistical anomalies, peer comparison, and a
-business-line breakdown. The core engine stays `pandas`/`numpy`-only; Streamlit
-is required only for the dashboard.
+If you use a virtual environment, install the package into it first
+(`pip install -e ".[ui]"`) and launch with that environment's Streamlit
+(`.\venv\Scripts\streamlit.exe run fr2052a_analytics\app.py` on Windows) so the
+`fr2052a_analytics` package resolves.
+
+The core engine stays `pandas`/`numpy`-only; Streamlit and Altair are required
+only for the dashboard.
+
+**Workflow.** In the sidebar, set the input directory, optionally pick a
+**Focus entity** (a specific institution to analyze, or *All entities* for an
+overview), choose the experimental forecast horizon, and click **Run analysis**.
+Picking a focus entity locks the per-entity views to that institution while peer
+comparison still benchmarks it against the full group.
+
+**What's on the page.**
+- **Findings by severity** — a color-coded bar chart plus a **Severity legend**
+  explaining what each level means (critical / high / medium / low / info). The
+  chart and legend share one color source so they always match.
+- **Entity liquidity profile** — the focus entity's metric time series with an
+  optional experimental forecast overlay.
+- **Finding detail, grouped by rule** — instead of a flat list of near-identical
+  daily alerts, findings are grouped into one card per rule. Each card shows the
+  rule's plain-language description, why it matters, and recommended action
+  (once), a breach summary (how many days, the date range, the worst and latest
+  day), a per-day breach table, and a threshold-aware trend chart that marks the
+  breach days and the day you select. A gauge shows how far past the threshold a
+  given day sits.
+- **Anomalies** — statistical flags (z-score, IQR, day-over-day jump) with the
+  reason for each.
+- **Peer comparison** — the focus entity's percentile rank and peer
+  median/quartiles for the selected metric.
+- **Business-line breakdown** — HQLA and stressed outflows per business line for
+  the latest day.
+
+The description/rationale/recommended-action text and the severity definitions
+are all config-driven (`analytics_config/rules.json`), so analysts can edit them
+without code changes.
 
 ## Tests
 
